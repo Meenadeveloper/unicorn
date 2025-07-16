@@ -18,6 +18,7 @@ import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
 import Blogs from './pages/Blogs';
 import BlogDetail from './pages/BlogDetail';
+import CreateAccount from './features/CreateAccount';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
     <Route path="/contact"  element={<Contact />} />
     <Route path="/blogs"  element={<Blogs />} />
      <Route path="/blog-detail/:id"  element={<BlogDetail />} />
+     <Route path="/register"  element={<CreateAccount />} />
 
       </Routes>
 
