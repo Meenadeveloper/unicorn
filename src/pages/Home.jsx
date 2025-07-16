@@ -7,6 +7,14 @@ import bg from '../assets/img/bg-1.jpg'
 import map from '../assets/img/pin.svg'
 import HowItsWork from '../components/home/HowItsWork';
 import RecentPropertyList from '../components/home/RecentPropertyList';
+import BestLocation from '../components/home/BestLocation';
+import Review from '../components/home/Review';
+import FooterTop from '../components/footer/FooterTop';
+import Footer from '../components/footer/Footer';
+import FeatureProperty from '../components/home/FeatureProperty';
+import Cta from '../components/home/Cta';
+import BlogPost from '../components/home/BlogPost';
+import PropertyType from '../components/home/PropertyType';
 const Home = () => {
 
     const minprice = [
@@ -145,6 +153,95 @@ const Home = () => {
             </div>	
         </section>
 
+          <section>
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-xl-6 col-lg-7 col-md-10">
+                        <div className="sec-heading text-center">
+                            <h2>Choose Property Type</h2>
+                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
+                        </div>
+                    </div>
+                </div>
+                <PropertyType/>
+            </div>
+        </section>
+        <div className="clearfix"></div>
+
+
+         <section>
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-xl-6 col-lg-7 col-md-10 text-center">
+                        <div className="sec-heading center">
+                            <h2>Find Best Locations</h2>
+                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
+                        </div>
+                    </div>
+                </div>
+                <BestLocation/>
+                <div className="row">
+                    <div className="col-lg-12 col-md-12 col-sm-12 text-center mt-5">
+                        <Link to="/listings-list-with-sidebar" className="btn btn-primary px-md-5 rounded">Browse More Locations</Link>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+          <section className="gray">
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-xl-6 col-lg-7 col-md-10 text-center">
+                        <div className="sec-heading center">
+                            <h2>Good Reviews by Customers</h2>
+                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
+                        </div>
+                    </div>
+                </div>
+                <Review/>
+            </div>
+        </section>
+
+ <section className="bg-light">
+        <div className="container">
+            <div className="row justify-content-center">
+                <div className="col-lg-7 col-md-10 text-center">
+                    <div className="sec-heading center">
+                        <h2>Featured Property For Sale</h2>
+                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
+                    </div>
+                </div>
+            </div>
+            <FeatureProperty border={false}/>
+            <div className="row">
+                <div className="col-lg-12 col-md-12 col-sm-12 text-center mt-4">
+                    <Link to="/listings-list-with-sidebar" className="btn btn-primary px-lg-5 rounded">Browse More Properties</Link>
+                </div>
+            </div>
+        </div>		
+    </section>
+
+      <div className="clearfix"></div>
+      <Cta/>
+
+         <section>
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-lg-7 col-md-10 text-center">
+                        <div className="sec-heading center">
+                            <h2>Latest Updates By Resido</h2>
+                            {/* <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p> */}
+                        </div>
+                    </div>
+                </div>
+                <BlogPost/>
+            </div>		
+        </section>
+
+
+       <FooterTop bg="theme-bg"/>
+        <Footer/>
 
     </>
   );

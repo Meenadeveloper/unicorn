@@ -18,16 +18,19 @@
     "react-countup": "^6.5.3",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
+    "react-image-gallery": "^1.4.0",
     "react-modal-video": "^2.0.2",
     "react-parallax": "^3.5.2",
     "react-responsive-masonry": "^2.7.1",
     "react-router-dom": "^7.6.3",
     "react-scroll": "^1.9.3",
     "react-select": "^5.10.2",
+    "react-spring-lightbox": "^1.8.0",
     "react-type-animation": "^3.2.0",
     "swiper": "^11.2.10",
     "tiny-slider": "^2.9.4",
-    "tiny-slider-react": "^0.5.7"
+    "tiny-slider-react": "^0.5.7",
+    "yet-another-react-lightbox": "^3.24.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",

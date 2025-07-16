@@ -1,43 +1,44 @@
 import { useState } from 'react'
 import './App.css'
 import { Routes, Route } from "react-router-dom";
-
-import TinySlider from "tiny-slider-react";
-import "../node_modules/tiny-slider/dist/tiny-slider.css";
 import ResponsiveMasonry from "react-responsive-masonry";
 import Masonry from "react-responsive-masonry";
 import CountUp from "react-countup";
 import ModalVideo from "react-modal-video";
 import { Parallax } from "react-parallax";
 import { Link, Element, animateScroll as scroll } from "react-scroll";
-import { TypeAnimation } from "react-type-animation";
-import bgImage from "../src/assets/img/banner-1.jpg";
 import Home from './pages/Home';
+import PropertyList from './pages/PropertyList';
+import PropertyDescription from './pages/PropertyDescription';
+import MyProfile from './pages/userprofile/MyProfile';
+import Wishlist from './pages/userprofile/Wishlist';
+import ChangePassword from './features/ChangePassword';
+import ErrorPage from './pages/ErrorPage';
+import AboutUs from './pages/AboutUs';
+import Contact from './pages/Contact';
+import Blogs from './pages/Blogs';
+import BlogDetail from './pages/BlogDetail';
 
-const images = [bgImage, bgImage, bgImage];
 
 function App() {
-  const [isOpen, setOpen] = useState(false);
 
-const settings = {
-  items: 1,
-  controls: false,
-  mouseDrag: true,
-  loop: true,
-  rewind: true,
-  autoplay: true,
-  autoplayButtonOutput: false,
-  autoplayTimeout: 3000,
-  navPosition: "bottom",
-  nav: true,
-  speed: 400,
-  gutter: 0,
-};
+
 
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/propert-list"  element={<PropertyList />} />
+                <Route path="/property-description"  element={<PropertyDescription />} />
+        <Route path="/my-profile"  element={<MyProfile />} />
+         <Route path="/wishlist"  element={<Wishlist />} />
+         <Route path="/change-password"  element={<ChangePassword />} />
+          <Route path="/not-found"  element={<ErrorPage />} />
+  <Route path="/about"  element={<AboutUs />} />
+    <Route path="/contact"  element={<Contact />} />
+    <Route path="/blogs"  element={<Blogs />} />
+     <Route path="/blog-detail/:id"  element={<BlogDetail />} />
+
       </Routes>
 
 
