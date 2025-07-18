@@ -178,11 +178,20 @@ const isUserRoute = location.pathname.startsWith("/user/");
     return properties.map((property) => (
       <div className="sides_list_property p-2" key={property.id}>
         <div className="sides_list_property_thumb">
-          <img src={property.image} className="img-fluid" alt={property.title} />
+          <img
+            src={property.image}
+            className="img-fluid"
+            alt={property.title}
+          />
         </div>
         <div className="sides_list_property_detail">
           <h4>
-            <Link to="/single-property-1" className="text-decoration-none">{property.title}</Link>
+            <Link
+              to={`/property-detail/${property.id}`}
+              className="text-decoration-none"
+            >
+              {property.title}
+            </Link>
           </h4>
           <span className="text-muted-2">
             <i className="fa-solid fa-location-dot"></i>
@@ -597,7 +606,7 @@ const isUserRoute = location.pathname.startsWith("/user/");
                 {renderPropertyCards(navbarData.properties.slice(0, 4))}
                 <div className="input-group">
                   <Link
-                    to="/compare-property"
+                    to="/"
                     className="btn btn-light-primary fw-medium full-width"
                   >
                     View & Compare
