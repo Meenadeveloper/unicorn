@@ -2680,7 +2680,9 @@ opacity: 1;
 	-webkit-animation-name: slideInDown;
 	animation-name: slideInDown;
 	}
-
+.header {
+    padding: 0px !important;
+  }
 @media screen and (max-width: 768px) {
   .header {
     padding: 0px !important;
