@@ -8,34 +8,37 @@ import { featureProperty } from '../../data/Propery'
 const DetailSidebar = () => {
   return (
     <>
-      <div className="like_share_wrap b-0">
-        <ul className="like_share_list">
-          <li>
-            <Link
-              to="https://wa.me/12345566776?text=Hello%2C%20I%20am%20interested%20in%20your%20service"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-likes"
-              data-toggle="tooltip"
-              data-original-title="Share on WhatsApp"
-            >
-              <i className="fab fa-whatsapp"></i> WhatsApp
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="#"
-              className="btn btn-likes"
-              data-toggle="tooltip"
-              data-original-title="Save"
-            >
-              <i className="fas fa-heart"></i>Wishlist
-            </Link>
-          </li>
-        </ul>
-      </div>
-
       <div className="details-sidebar div property-sidebar side_stiky">
+        <div className="like_share_wrap b-0">
+          <ul className="like_share_list">
+            <li>
+              <a
+                href="https://wa.me/12345566776?text=Hello%2C%20I%20am%20interested%20in%20your%20service"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-likes"
+                data-toggle="tooltip"
+                data-original-title="Share on WhatsApp"
+              >
+                <i className="fab fa-whatsapp"></i> WhatsApp
+              </a>
+            </li>
+            <li>
+              <a
+                href="tel:12345566776"
+                className="btn btn-likes"
+                data-toggle="tooltip"
+                data-original-title="Call"
+              >
+                <i
+                  className="fas fa-phone-alt "
+                  style={{ transform: "scaleX(-1)" }}
+                ></i>{" "}
+                Call
+              </a>
+            </li>
+          </ul>
+        </div>
         <div className="sides-widget">
           <div className="sides-widget-header bg-primary">
             {/* <div className="agent-photo">

@@ -308,16 +308,16 @@ export const bestLoction = [
     location: "Los Angeles",
     properties: "95 Properties",
   },
-  {
-    image: c7,
-    location: "Dubai, UAE",
-    properties: "95 Properties",
-  },
-  {
-    image: c8,
-    location: "Dhaka, UAE",
-    properties: "95 Properties",
-  },
+  // {
+  //   image: c7,
+  //   location: "Dubai, UAE",
+  //   properties: "95 Properties",
+  // },
+  // {
+  //   image: c8,
+  //   location: "Dhaka, UAE",
+  //   properties: "95 Properties",
+  // },
 ];
 
 export const clientData = [

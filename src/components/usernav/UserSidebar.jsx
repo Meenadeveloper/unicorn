@@ -32,19 +32,23 @@ const UserSidebar = ({show, setShow}) => {
             <div className="d-navigation">
               <ul>
                 {/* <li className={current === "/dashboard" ? "active" : ""}><Link to="/dashboard"><i className="fa-solid fa-gauge"></i>Dashboard</Link></li> */}
-                <li className={current === "/my-profile" ? "active" : ""}>
+                <li className={current === "/user/my-profile" ? "active" : ""}>
                   <Link to="/user/my-profile">
                     <i className="fa-solid fa-address-card"></i>My Profile
                   </Link>
                 </li>
-                <li className={current === "/wishlist" ? "active" : ""}>
+                <li className={current === "/user/wishlist" ? "active" : ""}>
                   <Link to="/user/wishlist">
-                    <i className="fa-solid fa-bookmark"></i>Bookmarked Listings
+                    <i className="fa-solid fa-bookmark"></i>Wishlist Listings
                   </Link>
                 </li>
                 {/* <li className={current === "/my-property" ? "active" : ""}><Link to="/my-property"><i className="fa-solid fa-building-circle-check"></i>My Properties</Link></li> */}
                 {/* <li className={current === "/submit-property-dashboard" ? "active" : ""}><Link to="/submit-property-dashboard"><i className="fa-solid fa-house"></i>Submit New Property</Link></li> */}
-                <li className={current === "/change-password" ? "active" : ""}>
+                <li
+                  className={
+                    current === "/user/change-password" ? "active" : ""
+                  }
+                >
                   <Link to="/user/change-password">
                     <i className="fa-solid fa-unlock"></i>Change Password
                   </Link>

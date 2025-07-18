@@ -130,7 +130,7 @@ const Footer = () => {
             <div className="row align-items-center">
               <div className="col-lg-6 col-md-6">
                 <p className="mb-0">
-                  © {new Date().getFullYear()} Resido. Develop with{" "}
+                  © {new Date().getFullYear()} Unicorn. Develop with{" "}
                   <i className="fa-solid fa-heart ms-1 text-danger"></i> By{" "}
                   <Link to="https://amrithaa.com/" target="_blank">
                     Amrithaa

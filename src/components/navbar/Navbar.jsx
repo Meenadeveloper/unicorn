@@ -412,7 +412,7 @@ const isUserRoute = location.pathname.startsWith("/user/");
               <div className="modal-body">
                 <h4 className="modal-header-title">Log In</h4>
                 <div className="d-flex align-items-center justify-content-center mb-3">
-                  <span className="svg-icon text-primary svg-icon-2hx">
+                  {/* <span className="svg-icon text-primary svg-icon-2hx">
                     <svg
                       width="80"
                       height="80"
@@ -430,7 +430,7 @@ const isUserRoute = location.pathname.startsWith("/user/");
                         fill="currentColor"
                       ></path>
                     </svg>
-                  </span>
+                  </span> */}
                 </div>
                 <div className="login-form">
                   <form>
@@ -491,7 +491,7 @@ const isUserRoute = location.pathname.startsWith("/user/");
                 <div className="modal-divider">
                   <span>Or login via</span>
                 </div>
-                <div className="social-login mb-3">
+                {/* <div className="social-login mb-3">
                   <ul>
                     <li>
                       <Link to="#" className="btn connect-fb">
@@ -512,7 +512,7 @@ const isUserRoute = location.pathname.startsWith("/user/");
                       </Link>
                     </li>
                   </ul>
-                </div>
+                </div> */}
                 <div className="text-center">
                   <p className="mt-4">
                     Haven't Any Account?{" "}
@@ -531,7 +531,7 @@ const isUserRoute = location.pathname.startsWith("/user/");
       <div className={`offcanvas offcanvas-end ${property ? "show" : ""}`}>
         <div className="offcanvas-header">
           <h5 className="offcanvas-title" id="offcanvasScrollingLabel">
-            Compare & Selected Property
+           Wishlist Property
           </h5>
           <Link to="#" onClick={() => setProperty(!property)}>
             <span className="svg-icon text-primary svg-icon-2hx">
@@ -574,7 +574,7 @@ const isUserRoute = location.pathname.startsWith("/user/");
           </Link>
         </div>
         <div className="offcanvas-body">
-          <ul
+          {/* <ul
             className="nav nav-pills sider_tab mb-3"
             id="pills-tab"
             role="tablist"
@@ -595,7 +595,7 @@ const isUserRoute = location.pathname.startsWith("/user/");
                 Saved Property
               </button>
             </li>
-          </ul>
+          </ul> */}
           <div className="tab-content" id="pills-tabContent">
             <div
               className={`tab-pane fade ${
@@ -609,7 +609,7 @@ const isUserRoute = location.pathname.startsWith("/user/");
                     to="/"
                     className="btn btn-light-primary fw-medium full-width"
                   >
-                    View & Compare
+                    View 
                   </Link>
                 </div>
               </div>
@@ -626,7 +626,7 @@ const isUserRoute = location.pathname.startsWith("/user/");
                     to="#"
                     className="btn btn-light-primary fw-medium full-width"
                   >
-                    View & Compare
+                    View 
                   </Link>
                 </div>
               </div>

@@ -109,12 +109,12 @@ const PropertyListingGrid = ({item}) => {
               </h6>
             </div>
             <div className="lst-short-btns-groups d-flex align-items-center">
-              <Link
+              {/* <Link
                 to="#"
                 className="square--50 circle text-primary bg-light-primary me-2"
               >
                 <i className="fa-solid fa-code-compare"></i>
-              </Link>
+              </Link> */}
               <Link
                 to="#"
                 className="square--50 circle text-success bg-light-success me-2"
