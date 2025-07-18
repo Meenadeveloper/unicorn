@@ -12,7 +12,7 @@ const Cta = () => {
                         <div className="caption-wrap-content text-center">
                             <h2 className="fs-1">Search Perfect Place in your City</h2>
                             <p className="mb-5">We post regulary most powerful articles for help and support.</p>
-                            <Link to="#" className="btn btn-whites fw-medium rounded">Explore More Property</Link>
+                            <Link to="/property-list" className="btn btn-whites fw-medium rounded">Explore More Property</Link>
                         </div>
                     </div>
                 </div>

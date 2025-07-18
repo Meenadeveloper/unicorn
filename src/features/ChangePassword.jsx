@@ -4,11 +4,12 @@ import FooterTop from '../components/footer/FooterTop'
 import Footer from '../components/footer/Footer'
 import UserSidebar from '../components/usernav/UserSidebar'
 import UserNav from '../components/usernav/UserNav'
+import Navbar from '../components/navbar/Navbar'
 const ChangePassword = () => {
        let [show, setShow] = useState(false)
   return (
     <>
-     <UserNav/>   
+<Navbar/>
 
     <div className="page-title">
         <div className="container">

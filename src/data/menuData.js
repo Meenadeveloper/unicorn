@@ -25,12 +25,10 @@ export const navbarData = {
   siteConfig: {
     logo: logo,
     siteName: "Resido",
-    logoAlt: "Resido Logo"
+    logoAlt: "Resido Logo",
   },
 
-
-
- mainMenu: [
+  mainMenu: [
     {
       id: 1,
       title: "Home",
@@ -38,15 +36,12 @@ export const navbarData = {
       path: "#",
       hasDropdown: true,
       icon: "home",
-      activePaths: [
-        "/", "/home-2", "/home-3", 
-      ],
+      activePaths: ["/", "/about", "/contact"],
       submenu: [
         { id: 11, title: "Home ", path: "/" },
-        { id: 12, title: "About Us", path: "/home-2" },
-        { id: 13, title: "Contact Us", path: "/home-3" },
-       
-      ]
+        { id: 12, title: "About Us", path: "/about" },
+        { id: 13, title: "Contact Us", path: "/contact" },
+      ],
     },
     {
       id: 2,
@@ -55,20 +50,15 @@ export const navbarData = {
       path: "#",
       hasDropdown: true,
       icon: "list",
-      activePaths: [
-        "/property", 
-      ],
+      activePaths: ["/propert-list"],
       submenu: [
         {
           id: 24,
           title: "Property",
           slug: "property",
-          path: "/property",
-         
+          path: "/propert-list",
         },
-        
-       
-      ]
+      ],
     },
     {
       id: 3,
@@ -77,32 +67,29 @@ export const navbarData = {
       path: "#",
       hasDropdown: true,
       icon: "star",
-      activePaths: [
-        "/property",
-      ],
+      activePaths: ["/propert-list"],
       submenu: [
         {
           id: 31,
           title: " Property",
           slug: "property",
-          path: "/property",
-         
+          path: "/propert-list",
         },
-       
-        
-      ]
+      ],
     },
     {
       id: 4,
       title: "Feature Property",
       slug: "pages",
-      path: "/feature",
-     
-    }
+      path: "/propert-list",
+    },
+    {
+      id: 5,
+      title: "Blog",
+      slug: "blog",
+      path: "/blogs",
+    },
   ],
-
-
-
 
   // mainMenu: [
   //   {
@@ -113,8 +100,8 @@ export const navbarData = {
   //     hasDropdown: true,
   //     icon: "home",
   //     activePaths: [
-  //       "/", "/home-2", "/home-3", "/home-4", "/home-5", 
-  //       "/home-6", "/home-7", "/home-8", "/home-9", 
+  //       "/", "/home-2", "/home-3", "/home-4", "/home-5",
+  //       "/home-6", "/home-7", "/home-8", "/home-9",
   //       "/home-10", "/home-11", "/video", "/map"
   //     ],
   //     submenu: [
@@ -317,22 +304,22 @@ export const navbarData = {
           <path opacity="0.3" d="M16.5 9C16.5 13.125 13.125 16.5 9 16.5C4.875 16.5 1.5 13.125 1.5 9C1.5 4.875 4.875 1.5 9 1.5C13.125 1.5 16.5 4.875 16.5 9Z" fill="currentColor"/>
           <path d="M9 16.5C10.95 16.5 12.75 15.75 14.025 14.55C13.425 12.675 11.4 11.25 9 11.25C6.6 11.25 4.57499 12.675 3.97499 14.55C5.24999 15.75 7.05 16.5 9 16.5Z" fill="currentColor"/>
           <rect x="7" y="6" width="4" height="4" rx="2" fill="currentColor"/>
-        </svg>`
-      }
+        </svg>`,
+      },
     },
-    {
-      id: 2,
-      title: "Post Property",
-      path: "/submit-property",
-      action: "submit",
-      className: "bg-primary",
-      wrapperClass: "add-listing",
-      icon: {
-        type: "image",
-        src: loginImg,
-        className: "me-1"
-      }
-    },
+    // {
+    //   id: 2,
+    //   title: "Post Property",
+    //   path: "/submit-property",
+    //   action: "submit",
+    //   className: "bg-primary",
+    //   wrapperClass: "add-listing",
+    //   icon: {
+    //     type: "image",
+    //     src: loginImg,
+    //     className: "me-1",
+    //   },
+    // },
     {
       id: 3,
       title: "",
@@ -344,9 +331,9 @@ export const navbarData = {
           <rect y="6" width="16" height="3" rx="1.5" fill="currentColor"/>
           <rect opacity="0.3" y="12" width="8" height="3" rx="1.5" fill="currentColor"/>
           <rect opacity="0.3" width="12" height="3" rx="1.5" fill="currentColor"/>
-        </svg>`
-      }
-    }
+        </svg>`,
+      },
+    },
   ],
 
   mobileMenu: [
@@ -356,19 +343,19 @@ export const navbarData = {
       icon: {
         type: "image",
         src: users,
-        alt: "users"
-      }
+        alt: "users",
+      },
     },
-    {
-      id: 2,
-      path: "/submit-property",
-      className: "text-primary",
-      icon: {
-        type: "image",
-        src: bar,
-        alt: "add"
-      }
-    },
+    // {
+    //   id: 2,
+    //   path: "/submit-property",
+    //   className: "text-primary",
+    //   icon: {
+    //     type: "image",
+    //     src: bar,
+    //     alt: "add",
+    //   },
+    // },
     {
       id: 3,
       action: "property",
@@ -376,69 +363,69 @@ export const navbarData = {
       icon: {
         type: "image",
         src: addImg,
-        alt: "menu"
-      }
-    }
+        alt: "menu",
+      },
+    },
   ],
 
   properties: [
     {
-       image: p1,
-       title: "Loss vengel New Apartment",
-       location: "Sans Fransico",
-       tag: "For Sale",
-       price: "$4,240",
-     },
-     {
-       image: p2,
-       title: "Montreal Quriqe Apartment",
-       location: "Liverpool, London",
-       tag: "For Rent",
-       price: "$7,380",
-     },
-     {
-       image: p3,
-       title: "Curmic Studio For Office",
-       location: "Montreal, Canada",
-       tag: "For Buy",
-       price: "$8,730",
-     },
-     {
-       image: p4,
-       title: "Montreal Quebec City",
-       location: "Sreek View, New York",
-       tag: "For Rent",
-       price: "$6,240",
-     },
-     {
-       image: p5,
-       title: "Loss vengel New Apartment",
-       location: "Sans Fransico",
-       tag: "For Sale",
-       price: "$4,240",
-     },
-     {
-       image: p6,
-       title: "Montreal Quriqe Apartment",
-       location: "Liverpool, London",
-       tag: "For Rent",
-       price: "$7,380",
-     },
-     {
-       image: p7,
-       title: "Curmic Studio For Office",
-       location: "Montreal, Canada",
-       tag: "For Buy",
-       price: "$8,730",
-     },
-     {
-       image: p8,
-       title: "Montreal Quebec City",
-       location: "Sreek View, New York",
-       tag: "For Rent",
-       price: "$6,240",
-     },
-  ]
+      image: p1,
+      title: "Loss vengel New Apartment",
+      location: "Sans Fransico",
+      tag: "For Sale",
+      price: "$4,240",
+    },
+    {
+      image: p2,
+      title: "Montreal Quriqe Apartment",
+      location: "Liverpool, London",
+      tag: "For Rent",
+      price: "$7,380",
+    },
+    {
+      image: p3,
+      title: "Curmic Studio For Office",
+      location: "Montreal, Canada",
+      tag: "For Buy",
+      price: "$8,730",
+    },
+    {
+      image: p4,
+      title: "Montreal Quebec City",
+      location: "Sreek View, New York",
+      tag: "For Rent",
+      price: "$6,240",
+    },
+    {
+      image: p5,
+      title: "Loss vengel New Apartment",
+      location: "Sans Fransico",
+      tag: "For Sale",
+      price: "$4,240",
+    },
+    {
+      image: p6,
+      title: "Montreal Quriqe Apartment",
+      location: "Liverpool, London",
+      tag: "For Rent",
+      price: "$7,380",
+    },
+    {
+      image: p7,
+      title: "Curmic Studio For Office",
+      location: "Montreal, Canada",
+      tag: "For Buy",
+      price: "$8,730",
+    },
+    {
+      image: p8,
+      title: "Montreal Quebec City",
+      location: "Sreek View, New York",
+      tag: "For Rent",
+      price: "$6,240",
+    },
+  ],
 };
 
 
@@ -469,16 +456,7 @@ export const menuData = {
         { id: 11, title: "Home Layout 1", path: "/", isActive: true },
         { id: 12, title: "Home Layout 2", path: "/home-2", isActive: false },
         { id: 13, title: "Home Layout 3", path: "/home-3", isActive: false },
-        { id: 14, title: "Home Layout 4", path: "/home-4", isActive: false },
-        { id: 15, title: "Home Layout 5", path: "/home-5", isActive: false },
-        { id: 16, title: "Home Layout 6", path: "/home-6", isActive: false },
-        { id: 17, title: "Home Layout 7", path: "/home-7", isActive: false },
-        { id: 18, title: "Home Layout 8", path: "/home-8", isActive: false },
-        { id: 19, title: "Home Layout 9", path: "/home-9", isActive: false },
-        { id: 20, title: "Home Layout 10", path: "/home-10", isActive: false },
-        { id: 21, title: "Home Layout 11", path: "/home-11", isActive: false },
-        { id: 22, title: "Video Home", path: "/video", isActive: false },
-        { id: 23, title: "Map Home Layout", path: "/map", isActive: false },
+        
       ],
     },
     {

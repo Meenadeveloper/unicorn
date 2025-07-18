@@ -29,21 +29,18 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/propert-list"  element={<PropertyList />} />
-                <Route path="/property-description"  element={<PropertyDescription />} />
-        <Route path="/my-profile"  element={<MyProfile />} />
-         <Route path="/wishlist"  element={<Wishlist />} />
-         <Route path="/change-password"  element={<ChangePassword />} />
-          <Route path="/not-found"  element={<ErrorPage />} />
-  <Route path="/about"  element={<AboutUs />} />
-    <Route path="/contact"  element={<Contact />} />
-    <Route path="/blogs"  element={<Blogs />} />
-     <Route path="/blog-detail/:id"  element={<BlogDetail />} />
-     <Route path="/register"  element={<CreateAccount />} />
-
+        <Route path="/propert-list" element={<PropertyList />} />
+        <Route path="/property-detail/:id" element={<PropertyDescription />} />
+        <Route path="user/my-profile" element={<MyProfile />} />
+        <Route path="user/wishlist" element={<Wishlist />} />
+        <Route path="user/change-password" element={<ChangePassword />} />
+        <Route path="/not-found" element={<ErrorPage />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blog-detail/:id" element={<BlogDetail />} />
+        <Route path="/create-account" element={<CreateAccount />} />
       </Routes>
-
-
     </>
   );
 }

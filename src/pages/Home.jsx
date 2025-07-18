@@ -61,188 +61,241 @@ const Home = () => {
     <>
       <Navbar transparent={false} />
 
-       <div className="image-cover hero-banner" style={{backgroundImage:`url(${bg})`, backgroundRepeat:'no-repeat'}}>
-            <div className="container">
-                <div className="hero-search-wrap">
-                    <div className="hero-search">
-                        <h1>Find accessible homes to rent</h1>
-                    </div>
-                    <div className="hero-search-content side-form">
-                        
-                        <div className="row">
-                            <div className="col-lg-12 col-md-12 col-sm-12">
-                                <div className="form-group">
-                                    <div className="input-with-icon">
-                                        <input type="text" className="form-control" placeholder="Search for a location"/>
-                                        <img src={map} width="18" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div className="row">
-                            <div className="col-lg-6 col-md-6 col-sm-6">
-                                <div className="form-group">
-                                    <label className='mb-2'>Min Price</label>
-                                    <Select options={minprice}  className="form-control" placeholder="No Min"/>
-                                </div>
-                            </div>
-                            <div className="col-lg-6 col-md-6 col-sm-6">
-                                <div className="form-group">
-                                    <label className='mb-2'>Max Price</label>
-                                    <Select options={maxprice} className="form-control" placeholder="No Max"/>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div className="row">
-                            <div className="col-lg-6 col-md-6 col-sm-6">
-                                <div className="form-group">
-                                    <label className='mb-2'>Property Type</label>
-                                    <Select options={propertyType} className="form-control" placeholder="Show All"/>
-                                </div>
-                            </div>
-                            <div className="col-lg-6 col-md-6 col-sm-6">
-                                <div className="form-group">
-                                    <label className='mb-2'>Bed Rooms</label>
-                                    <Select options={rooms} className="form-control" placeholder="Bedrooms"/>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div className="row">
-                            <div className="col-lg-12 col-md-12 col-sm-12">
-                                <div className="form-group">
-                                    <label className='mb-2'>Property Location</label>
-                                    <Select options={loction} className="form-control" placeholder="All Cities"/>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div className="hero-search-action">
-                        <Link to="#" className="btn full-width btn-primary">Search Result</Link>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-          <section>
-            <HowItsWork/>
-        </section>
-
-         <section className="bg-light">
-            <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-xl-6 col-lg-7 col-md-10 text-center">
-                        <div className="sec-heading center">
-                            <h2>Explore Recent properties</h2>
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <RecentPropertyList border={false}/>
-                
-                <div className="row align-items-center justify-content-center">
-                    <div className="col-lg-12 col-md-12 col-sm-12 text-center mt-5">
-                        <Link to="#" className="btn btn-primary px-md-5 rounded ">Browse More Properties</Link>
-                    </div>
-                </div>
-            </div>	
-        </section>
-
-          <section>
-            <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-xl-6 col-lg-7 col-md-10">
-                        <div className="sec-heading text-center">
-                            <h2>Choose Property Type</h2>
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
-                        </div>
-                    </div>
-                </div>
-                <PropertyType/>
-            </div>
-        </section>
-        <div className="clearfix"></div>
-
-
-         <section>
-            <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-xl-6 col-lg-7 col-md-10 text-center">
-                        <div className="sec-heading center">
-                            <h2>Find Best Locations</h2>
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
-                        </div>
-                    </div>
-                </div>
-                <BestLocation/>
-                <div className="row">
-                    <div className="col-lg-12 col-md-12 col-sm-12 text-center mt-5">
-                        <Link to="/listings-list-with-sidebar" className="btn btn-primary px-md-5 rounded">Browse More Locations</Link>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-          <section className="gray">
-            <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-xl-6 col-lg-7 col-md-10 text-center">
-                        <div className="sec-heading center">
-                            <h2>Good Reviews by Customers</h2>
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
-                        </div>
-                    </div>
-                </div>
-                <Review/>
-            </div>
-        </section>
-
- <section className="bg-light">
+      <div
+        className="image-cover hero-banner"
+        style={{ backgroundImage: `url(${bg})`, backgroundRepeat: "no-repeat" }}
+      >
         <div className="container">
-            <div className="row justify-content-center">
-                <div className="col-lg-7 col-md-10 text-center">
-                    <div className="sec-heading center">
-                        <h2>Featured Property For Sale</h2>
-                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
+          <div className="hero-search-wrap">
+            <div className="hero-search">
+              <h1>Find accessible homes to rent</h1>
+            </div>
+            <div className="hero-search-content side-form">
+              <div className="row">
+                <div className="col-lg-12 col-md-12 col-sm-12">
+                  <div className="form-group">
+                    <div className="input-with-icon">
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Search for a location"
+                      />
+                      <img src={map} width="18" alt="" />
                     </div>
+                  </div>
                 </div>
-            </div>
-            <FeatureProperty border={false}/>
-            <div className="row">
-                <div className="col-lg-12 col-md-12 col-sm-12 text-center mt-4">
-                    <Link to="/listings-list-with-sidebar" className="btn btn-primary px-lg-5 rounded">Browse More Properties</Link>
+              </div>
+
+              <div className="row">
+                <div className="col-lg-6 col-md-6 col-sm-6">
+                  <div className="form-group">
+                    <label className="mb-2">Min Price</label>
+                    <Select
+                      options={minprice}
+                      className="form-control"
+                      placeholder="No Min"
+                    />
+                  </div>
                 </div>
+                <div className="col-lg-6 col-md-6 col-sm-6">
+                  <div className="form-group">
+                    <label className="mb-2">Max Price</label>
+                    <Select
+                      options={maxprice}
+                      className="form-control"
+                      placeholder="No Max"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="col-lg-6 col-md-6 col-sm-6">
+                  <div className="form-group">
+                    <label className="mb-2">Property Type</label>
+                    <Select
+                      options={propertyType}
+                      className="form-control"
+                      placeholder="Show All"
+                    />
+                  </div>
+                </div>
+                <div className="col-lg-6 col-md-6 col-sm-6">
+                  <div className="form-group">
+                    <label className="mb-2">Bed Rooms</label>
+                    <Select
+                      options={rooms}
+                      className="form-control"
+                      placeholder="Bedrooms"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="col-lg-12 col-md-12 col-sm-12">
+                  <div className="form-group">
+                    <label className="mb-2">Property Location</label>
+                    <Select
+                      options={loction}
+                      className="form-control"
+                      placeholder="All Cities"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>		
-    </section>
+            <div className="hero-search-action">
+              <Link to="#" className="btn full-width btn-primary">
+                Search Result
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section>
+        <HowItsWork />
+      </section>
+
+      <section className="bg-light">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-6 col-lg-7 col-md-10 text-center">
+              <div className="sec-heading center">
+                <h2>Explore Recent properties</h2>
+                <p>
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                  blanditiis praesentium voluptatum deleniti atque corrupti quos
+                  dolores
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <RecentPropertyList border={false} />
+
+          <div className="row align-items-center justify-content-center">
+            <div className="col-lg-12 col-md-12 col-sm-12 text-center mt-5">
+              <Link to="/property-list" className="btn btn-primary px-md-5 rounded ">
+                Browse More Properties
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-6 col-lg-7 col-md-10">
+              <div className="sec-heading text-center">
+                <h2>Choose Property Type</h2>
+                <p>
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                  blanditiis praesentium voluptatum deleniti atque corrupti quos
+                  dolores
+                </p>
+              </div>
+            </div>
+          </div>
+          <PropertyType />
+        </div>
+      </section>
+      <div className="clearfix"></div>
+      <section className="bg-light">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-7 col-md-10 text-center">
+              <div className="sec-heading center">
+                <h2>Featured Property For Sale</h2>
+                <p>
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                  blanditiis praesentium voluptatum deleniti atque corrupti quos
+                  dolores
+                </p>
+              </div>
+            </div>
+          </div>
+          <FeatureProperty border={false} />
+          <div className="row">
+            <div className="col-lg-12 col-md-12 col-sm-12 text-center mt-4">
+              <Link
+                to="/property-list"
+                className="btn btn-primary px-lg-5 rounded"
+              >
+                Browse More Properties
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-6 col-lg-7 col-md-10 text-center">
+              <div className="sec-heading center">
+                <h2>Find Best Locations</h2>
+                <p>
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                  blanditiis praesentium voluptatum deleniti atque corrupti quos
+                  dolores
+                </p>
+              </div>
+            </div>
+          </div>
+          <BestLocation />
+          <div className="row">
+            <div className="col-lg-12 col-md-12 col-sm-12 text-center mt-5">
+              <Link
+                to="/listings-list-with-sidebar"
+                className="btn btn-primary px-md-5 rounded"
+              >
+                Browse More Locations
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="gray">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-6 col-lg-7 col-md-10 text-center">
+              <div className="sec-heading center">
+                <h2>Good Reviews by Customers</h2>
+                <p>
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                  blanditiis praesentium voluptatum deleniti atque corrupti quos
+                  dolores
+                </p>
+              </div>
+            </div>
+          </div>
+          <Review />
+        </div>
+      </section>
 
       <div className="clearfix"></div>
-      <Cta/>
+      <Cta />
 
-         <section>
-            <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-lg-7 col-md-10 text-center">
-                        <div className="sec-heading center">
-                            <h2>Latest Updates By Resido</h2>
-                            {/* <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p> */}
-                        </div>
-                    </div>
-                </div>
-                <BlogPost/>
-            </div>		
-        </section>
+      <section>
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-7 col-md-10 text-center">
+              <div className="sec-heading center">
+                <h2>Latest Updates By Resido</h2>
+                {/* <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p> */}
+              </div>
+            </div>
+          </div>
+          <BlogPost />
+        </div>
+      </section>
 
-
-       <FooterTop bg="theme-bg"/>
-        <Footer/>
-
+      <FooterTop bg="theme-bg" />
+      <Footer />
     </>
   );
 }

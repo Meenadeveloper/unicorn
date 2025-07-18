@@ -474,7 +474,7 @@ const PropertyDetail = () => {
                 </div>
             </div>
 
-            <div className="property_block_wrap style-2">
+            {/* <div className="property_block_wrap style-2">
                 <div className="property_block_wrap_header">
                     <Link to="#" onClick={() => setOpen8(!open8)} className={open8 ? '' : 'collapsed'}><h4 className="property_block_title">102 Reviews</h4></Link>
                 </div>
@@ -642,7 +642,7 @@ const PropertyDetail = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div className="property_block_wrap style-2">
                 <div className="property_block_wrap_header">

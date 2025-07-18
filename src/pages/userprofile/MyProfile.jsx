@@ -4,6 +4,7 @@ import Footer from '../../components/footer/Footer'
 import FooterTop from '../../components/footer/FooterTop'
 import UserSidebar from '../../components/usernav/UserSidebar'
 import UserNav from '../../components/usernav/UserNav'
+import Navbar from '../../components/navbar/Navbar'
 
 
 const MyProfile = () => {
@@ -11,7 +12,7 @@ const MyProfile = () => {
 
   return (
     <>
-     <UserNav/>
+    <Navbar/>
         <div className="page-title">
             <div className="container">
                 <div className="row">

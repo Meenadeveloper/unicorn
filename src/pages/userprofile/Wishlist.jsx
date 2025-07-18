@@ -5,11 +5,12 @@ import FooterTop from '../../components/footer/FooterTop'
 import Footer from '../../components/footer/Footer'
 import UserNav from '../../components/usernav/UserNav'
 import { bookMarkProperty } from '../../data/Propery'
+import Navbar from '../../components/navbar/Navbar'
 const Wishlist = () => {
        let [show, setShow] = useState(false)
   return (
     <>
-      <UserNav/>
+     <Navbar/>
 
     <div className="page-title">
         <div className="container">
