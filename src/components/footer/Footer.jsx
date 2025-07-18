@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import googlePlay from '../../assets/img/svg/google-play.svg'
 import app from '../../assets/img/svg/apple-store.svg'
+import logo from '../../assets/img/logo.jpg'
 
 const Footer = () => {
   return (
@@ -11,7 +12,7 @@ const Footer = () => {
             <div className="col-lg-3 col-md-4">
               <div className="footer-widget">
                 <Link className="nav-footer-logo" to="/">
-                  <span className="svg-icon text-light svg-icon-2hx">
+                  {/* <span className="svg-icon text-light svg-icon-2hx">
                     <svg
                       width="65"
                       height="65"
@@ -30,7 +31,17 @@ const Footer = () => {
                       />
                     </svg>
                   </span>
-                  <h5 className="fs-2 fw-bold text-light ms-1 my-0">Unicorn</h5>
+                  <h5 className="fs-2 fw-bold text-light ms-1 my-0">Unicorn</h5> */}
+
+                  <img
+                    src={logo}
+                    alt="footer logo"
+                    style={{
+                      maxHeight: "120px", // controls height of logo
+                      maxWidth: "100%", // prevents horizontal overflow
+                      objectFit: "contain", // maintains aspect ratio
+                    }}
+                  />
                 </Link>
                 <div className="footer-add">
                   {/* <p>Collins Street West, Victoria 8007, Australia.</p>

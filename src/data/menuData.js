@@ -1,5 +1,5 @@
 
-import logo from '../assets/img/logo.svg'
+import logo from '../assets/img/logo.jpg'
 import users from '../assets/img/svg/users.svg'
 import addImg from '../assets/img/svg/add.svg'
 import bar from '../assets/img/svg/bar.svg'

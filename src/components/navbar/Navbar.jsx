@@ -250,14 +250,29 @@ const isUserRoute = location.pathname.startsWith("/user/");
             }
           >
             <div className="nav-header" style={{ lineHeight: "0" }}>
-              <Link className="nav-brand text-logo" to="/">
+              <Link
+                className="nav-brand text-logo"
+                to="/"
+                style={{
+                  width: "auto", // allow image to size naturally
+                  height: "auto", // let image control height
+                  // marginRight: "50px",
+                  display: "flex", // helps with layout
+                  alignItems: "center",
+                }}
+              >
                 <img
                   src={navbarData.siteConfig.logo}
                   alt={navbarData.siteConfig.logoAlt}
+                  style={{
+                    maxHeight: "70px", // controls height of logo
+                    maxWidth: "100%", // prevents horizontal overflow
+                    objectFit: "contain", // maintains aspect ratio
+                  }}
                 />
-                <h5 className="fs-3 fw-bold ms-1 my-0">
+                {/* <h5 className="fs-3 fw-bold ms-1 my-0">
                   {navbarData.siteConfig.siteName}
-                </h5>
+                </h5> */}
               </Link>
               <div
                 className="nav-toggle"
