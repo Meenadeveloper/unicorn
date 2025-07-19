@@ -239,7 +239,7 @@ export const propertyData = [
     size: "3BHK",
     beds: "3 Beds",
     sqft: "1800 SQFT",
-    value: "QR  80,000",
+    value: "QAR  80,000",
   },
   {
     id: 2,
@@ -252,7 +252,7 @@ export const propertyData = [
     size: "3BHK",
     beds: "3 Beds",
     sqft: "1800 SQFT",
-    value: "QR  67,000",
+    value: "QAR  67,000",
   },
   {
     id: 3,
@@ -265,7 +265,7 @@ export const propertyData = [
     size: "3BHK",
     beds: "3 Beds",
     sqft: "1800 SQFT",
-    value: "QR  92,500",
+    value: "QAR  92,500",
   },
   {
     id: 4,
@@ -278,7 +278,7 @@ export const propertyData = [
     size: "3BHK",
     beds: "3 Beds",
     sqft: "1800 SQFT",
-    value: "QR  89,000",
+    value: "QAR  89,000",
   },
   {
     id: 5,
@@ -291,7 +291,7 @@ export const propertyData = [
     size: "3BHK",
     beds: "3 Beds",
     sqft: "1800 SQFT",
-    value: "QR  88,000",
+    value: "QAR  88,000",
   },
   {
     id: 6,
@@ -304,7 +304,7 @@ export const propertyData = [
     size: "3BHK",
     beds: "3 Beds",
     sqft: "1800 SQFT",
-    value: "QR  10,50000",
+    value: "QAR  10,50000",
   },
   {
     id: 7,
@@ -317,7 +317,7 @@ export const propertyData = [
     size: "3BHK",
     beds: "3 Beds",
     sqft: "1800 SQFT",
-    value: "QR  89,000",
+    value: "QAR  89,000",
   },
   {
     id: 8,
@@ -330,7 +330,7 @@ export const propertyData = [
     size: "3BHK",
     beds: "3 Beds",
     sqft: "1800 SQFT",
-    value: "QR  88,000",
+    value: "QAR  88,000",
   },
   {
     id: 9,
@@ -343,7 +343,7 @@ export const propertyData = [
     size: "3BHK",
     beds: "3 Beds",
     sqft: "1800 SQFT",
-    value: "QR  10,50000",
+    value: "QAR  10,50000",
   },
 ];
 

@@ -81,7 +81,8 @@ export const navbarData = {
       id: 5,
       title: "Blog",
       slug: "blog",
-      path: "/blogs",
+      // path: "/blogs",
+      path: "#",
     },
   ],
 
