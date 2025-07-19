@@ -6697,7 +6697,7 @@ ul.deatil_features li strong {
     margin-left: 10px;
 }
 .list-fx-features {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     justify-content: flex-start;
 }
 .listing-card-info-icon {

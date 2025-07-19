@@ -33,49 +33,50 @@ const FeatureProperty = ({border}) => {
                   </div>
                   <div className="listing-content">
                     <div className="listing-detail-wrapper-box">
-                      <div className="listing-detail-wrapper d-flex align-items-top justify-content-between">
+                      <div className="listing-detail-wrapper d-flex align-items-top justify-content-between"
+                        style={{ flexWrap:"wrap", gap:"10px",  }}>
                         <div className="listing-short-detail ">
-                          <h4 className="listing-name mb-1 mt-0 text-truncate-2">
+                          <h4 className="listing-name mb-0 mt-0 text-truncate-1" style={{minHeight:"100% !important"}}>
                             <Link to={`/property-detail/${item.id}`}>
                               {item.name}
                             </Link>
                           </h4>
-                          <div className="fr-can-rating">
-                            <i
-                              className="fas fa-star fs-xs filled"
-                              style={{ margin: "0 2px" }}
-                            ></i>
-                            <i
-                              className="fas fa-star fs-xs filled"
-                              style={{ margin: "0 2px" }}
-                            ></i>
-                            <i
-                              className="fas fa-star fs-xs filled"
-                              style={{ margin: "0 2px" }}
-                            ></i>
-                            <i
-                              className="fas fa-star fs-xs filled"
-                              style={{ margin: "0 2px" }}
-                            ></i>
-                            <i
-                              className="fas fa-star fs-xs"
-                              style={{ margin: "0 2px" }}
-                            ></i>
-                            <span className="reviews_text fs-sm text-muted ms-2">
-                              (42 Reviews)
-                            </span>
-                          </div>
                         </div>
                         <div className="list-price">
                           <h6 className="listing-card-info-price text-primary">
                             {item.value}
                           </h6>
                         </div>
+                        <div className="fr-can-rating">
+                          <i
+                            className="fas fa-star fs-xs filled"
+                            style={{ margin: "0 2px" }}
+                          ></i>
+                          <i
+                            className="fas fa-star fs-xs filled"
+                            style={{ margin: "0 2px" }}
+                          ></i>
+                          <i
+                            className="fas fa-star fs-xs filled"
+                            style={{ margin: "0 2px" }}
+                          ></i>
+                          <i
+                            className="fas fa-star fs-xs filled"
+                            style={{ margin: "0 2px" }}
+                          ></i>
+                          <i
+                            className="fas fa-star fs-xs"
+                            style={{ margin: "0 2px" }}
+                          ></i>
+                          <span className="reviews_text fs-sm text-muted ms-2">
+                            (42 Reviews)
+                          </span>
+                        </div>
                       </div>
                     </div>
 
                     <div className="price-features-wrapper">
-                      <div className="list-fx-features d-flex align-items-center justify-content-between mt-3 mb-1">
+                      <div className="list-fx-features d-flex align-items-center justify-content-between mt-0 mb-1">
                         <div className="listing-card d-flex align-items-center">
                           <div className="square--25 text-muted-2 fs-sm circle gray-simple me-1">
                             <i className="fa-solid fa-building-shield fs-xs"></i>

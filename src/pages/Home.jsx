@@ -254,7 +254,7 @@ const Home = () => {
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12 text-center mt-5">
               <Link
-                to="/listings-list-with-sidebar"
+                to="#"
                 className="btn btn-primary px-md-5 rounded"
               >
                 Browse More Locations

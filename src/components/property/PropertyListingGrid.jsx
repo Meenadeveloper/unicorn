@@ -18,14 +18,16 @@ const PropertyListingGrid = ({item}) => {
       <div className="property-listing card border-0 rounded-3">
         <div className="listing-img-wrapper p-3">
           <div className="position-relative">
-            <div className="position-absolute top-0 left-0 ms-3 mt-3 z-1">
+            {/* <div className="position-absolute top-0 left-0 ms-3 mt-3 z-1">
               {item.tag.map((el, index) => {
                 return (
                   <div
                     key={index}
                     className={`label text-light d-inline-flex align-items-center justify-content-center mx-1 ${
                       el === "Verified" ? "bg-success" : ""
-                    } ${el === "SuperAgent" ? "bg-purple" : ""} ${
+                      }
+                       ${el === "SuperAgent" ? "bg-purple" : ""} 
+                    ${
                       el === "New" ? "bg-danger" : ""
                     }`}
                   >
@@ -42,7 +44,7 @@ const PropertyListingGrid = ({item}) => {
                   </div>
                 );
               })}
-            </div>
+            </div> */}
             <div className="list-img-slide">
               <div className="click mb-0 rounded-3 overflow-hidden">
                 <Swiper
