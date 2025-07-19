@@ -488,9 +488,9 @@ const isUserRoute = location.pathname.startsWith("/user/");
                     </div>
                   </form>
                 </div>
-                <div className="modal-divider">
+                {/* <div className="modal-divider">
                   <span>Or login via</span>
-                </div>
+                </div> */}
                 {/* <div className="social-login mb-3">
                   <ul>
                     <li>

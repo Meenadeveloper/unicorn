@@ -73,14 +73,21 @@ const RecentPropertyGrid = ({item,border}) => {
                 autoplay={{ delay: 3000 }}
                 pagination={{ clickable: true }}
                 className="rounded-3 overflow-hidden"
+                style={{ height: "200px" }} // or any fixed height you want
               >
                 {item.image.map((el, index) => (
                   <SwiperSlide key={index}>
                     <Link to={`/property-detail/${item.id}`}>
                       <img
                         src={el}
-                        className="img-fluid"
                         alt={`slide-${index}`}
+                        className="w-100 h-100"
+                        style={{
+                          objectFit: "cover",
+                          width: "100%",
+                          height: "100%",
+                          display: "block",
+                        }}
                       />
                     </Link>
                   </SwiperSlide>

@@ -1,9 +1,8 @@
-
-import logo from '../assets/img/logo.jpg'
-import users from '../assets/img/svg/users.svg'
-import addImg from '../assets/img/svg/add.svg'
-import bar from '../assets/img/svg/bar.svg'
-import loginImg from '../assets/img/svg/login.svg'
+import logo from "../assets/img/logo.jpg";
+import users from "../assets/img/svg/users.svg";
+import addImg from "../assets/img/svg/add.svg";
+import bar from "../assets/img/svg/bar.svg";
+import loginImg from "../assets/img/svg/login.svg";
 
 import p1 from "../assets/img/p-1.jpg";
 import p2 from "../assets/img/p-2.jpg";
@@ -15,17 +14,12 @@ import p7 from "../assets/img/p-7.jpg";
 import p8 from "../assets/img/p-8.jpg";
 import p9 from "../assets/img/p-9.jpg";
 
-
-
-
-
-
 // navbarData.js - Dynamic menu configuration
 export const navbarData = {
   siteConfig: {
     logo: logo,
-    siteName: "Resido",
-    logoAlt: "Resido Logo",
+    siteName: "Unicorn",
+    logoAlt: "Unicorn Logo",
   },
 
   mainMenu: [
@@ -295,9 +289,9 @@ export const navbarData = {
   socialMenu: [
     {
       id: 1,
-      title: "SignUp or SignIn",
+      title: "Login",
       action: "login",
-      className: "bg-primary",
+      className: "bg-primary-light",
       wrapperClass: "add-listing",
       icon: {
         type: "svg",
@@ -429,19 +423,6 @@ export const navbarData = {
   ],
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // menuData.js - Dynamic Menu Configuration
 export const menuData = {
   mainMenu: [
@@ -457,7 +438,6 @@ export const menuData = {
         { id: 11, title: "Home Layout 1", path: "/", isActive: true },
         { id: 12, title: "Home Layout 2", path: "/home-2", isActive: false },
         { id: 13, title: "Home Layout 3", path: "/home-3", isActive: false },
-        
       ],
     },
     {
@@ -963,7 +943,7 @@ export const menuData = {
   // Site configuration
   siteConfig: {
     logo: "/assets/img/logo.svg",
-    siteName: "Resido",
+    siteName: "Unicorn",
     tagline: "Your Dream Property Awaits",
   },
 };

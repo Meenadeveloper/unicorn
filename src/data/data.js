@@ -77,7 +77,7 @@ import tour3 from "../assets/img/tour-3.jpg";
 import tour4 from "../assets/img/tour-4.jpg";
 import tour5 from "../assets/img/tour-5.jpg";
 
-import commercial from "../assets/img/icons/Whole Buildings.png"
+import commercial from "../assets/img/icons/Whole Buildings.png";
 import apartment from "../assets/img/icons/Apartments.png";
 import townhouse from "../assets/img/icons/Townhouses.png";
 import vila from "../assets/img/icons/Villas.png";
@@ -368,7 +368,6 @@ export const workData = [
   },
 ];
 
-
 export const bestLoction = [
   {
     image: c1,
@@ -449,7 +448,6 @@ export const clientData = [
     position: "Real Estate Investor, Chicago",
   },
 ];
-
 
 export const pricingData = [
   {
@@ -590,8 +588,8 @@ export const blogData = [
     id: 2,
     image: p20,
     date: "29th Nov 2025",
-    title: "Top Benefits of Choosing Resido Property Services",
-    desc: "From smart search filters to dedicated support, discover the advantages of using Resido for your property needs.",
+    title: "Top Benefits of Choosing Unicorn Property Services",
+    desc: "From smart search filters to dedicated support, discover the advantages of using Unicorn for your property needs.",
   },
   {
     id: 3,
@@ -611,8 +609,8 @@ export const blogData = [
     id: 5,
     image: p23,
     date: "5th May 2025",
-    title: "Why Investors Trust Resido for Real Estate Deals",
-    desc: "See how Resido helps real estate investors find high-return properties and make data-driven decisions.",
+    title: "Why Investors Trust Unicorn for Real Estate Deals",
+    desc: "See how Unicorn helps real estate investors find high-return properties and make data-driven decisions.",
   },
   {
     id: 6,
@@ -622,7 +620,6 @@ export const blogData = [
     desc: "Our clients share their experiences—discover what makes Listio a preferred platform for buying and selling homes.",
   },
 ];
-
 
 export const explorePlace = [
   {
@@ -691,8 +688,6 @@ export const explorePlace = [
     property: "13 Properties",
   },
 ];
-
-
 
 export const categoriesData = [
   {

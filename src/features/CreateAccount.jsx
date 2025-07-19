@@ -13,7 +13,7 @@ const CreateAccount = () => {
                 <div className="row">
                     <div className="col-lg-12 col-md-12">
                         <h2 className="ipt-title">Create An Account</h2>
-                        <span className="ipn-subtitle">Register On Resido Today</span>
+                        <span className="ipn-subtitle">Register On Unicorn Today</span>
                     </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@ const CreateAccount = () => {
                                             </span> */}
                                         </Link>
                                     </div>
-                                    <h4 className="fs-2">Create Account On Resido</h4>
+                                    <h4 className="fs-2">Create Account On Unicorn</h4>
                                 </div>
                                 <form>
                                     
@@ -57,12 +57,12 @@ const CreateAccount = () => {
                                             </div>
                                         </div>
                                         
-                                        <div className="col-lg-6 col-md-6 mb-3">
+                                        {/* <div className="col-lg-6 col-md-6 mb-3">
                                             <div className="form-group">
                                                 <label className='mb-2'>Username</label>
                                                 <input type="text" className="form-control" placeholder="Username"/>
                                             </div>
-                                        </div>
+                                        </div> */}
                                         
                                         <div className="col-lg-6 col-md-6 mb-3">
                                             <div className="form-group">
@@ -78,7 +78,7 @@ const CreateAccount = () => {
                                             </div>
                                         </div>
                                         
-                                        <div className="col-lg-6 col-md-6 mb-3">
+                                        {/* <div className="col-lg-6 col-md-6 mb-3">
                                             <div className="form-group">
                                                 <label className='mb-2'>Signup As</label>
                                                 <select className="form-control">
@@ -87,7 +87,7 @@ const CreateAccount = () => {
                                                     <option>As a Agency</option>
                                                 </select>
                                             </div>
-                                        </div>
+                                        </div> */}
                                     </div>
                                     <div className="form-group">
                                         <button type="submit" className="btn btn-primary full-width fw-medium">Create Account<i className="fa-solid fa-arrow-right-long ms-2"></i></button>

@@ -3,7 +3,7 @@ import Navbar from '../components/navbar/Navbar'
 import { Link } from 'react-router-dom';
 import Select from 'react-select';
 
-import bg from '../assets/img/homebanner.jpeg'
+import bg from '../assets/img/homebanner.png'
 import map from '../assets/img/pin.svg'
 import HowItsWork from '../components/home/HowItsWork';
 import RecentPropertyList from '../components/home/RecentPropertyList';

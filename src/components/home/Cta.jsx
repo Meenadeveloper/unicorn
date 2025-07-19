@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
 
-import bg from '../../assets/img/banner-2.jpg'
+import bg from '../../assets/img/p-3.jpg'
 const Cta = () => {
   return (
     <>
-      <section className="image-cover" style={{backgroundImage:`url(${bg})`, backgroundRepeat:'no-repeat'}} data-overlay="4">
+      <section className="image-cover" style={{backgroundImage:`url(${bg})`, backgroundRepeat:'no-repeat'}} data-overlay="7">
             <div className="ht-80"></div>
             <div className="container position-relative z-1">
                 <div className="row justify-content-center">

@@ -1,5 +1,5 @@
 /*
-* Theme Name: Resido - Real Estate Template
+* Theme Name: unicorn - Real Estate Template
 * Author: Shreethemes
 * Version: 1.0.0
 * Last Change: 10th December 2024
@@ -93,6 +93,11 @@ head{
 .preloader span:last-child {
   animation-delay: -0.8s;
   -webkit-animation-delay: -0.8s;
+}
+.bg-primary-light{
+    border: 2px solid #aa9371;
+    border-radius: 6px;
+    background-color: #aa9371;
 }
 
 @keyframes preloader {
@@ -2910,7 +2915,7 @@ nav a:hover {
   display: inline-block;
   transition: color 0.3s, background 0.3s;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 

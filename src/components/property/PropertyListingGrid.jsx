@@ -53,11 +53,23 @@ const PropertyListingGrid = ({item}) => {
                   spaceBetween={5}
                   slidesPerView={1}
                   pagination={{ clickable: true }}
+                  className="rounded-3 overflow-hidden"
+                  style={{ height: "200px" }} // or any fixed height you want
                 >
                   {item.image.map((el, index) => (
                     <SwiperSlide key={index}>
                       <Link to={`/property-detail/${item.id}`}>
-                        <img src={el} className="img-fluid w-100" alt="" />
+                        <img
+                          src={el}
+                          className="w-100 h-100"
+                          style={{
+                            objectFit: "cover",
+                            width: "100%",
+                            height: "100%",
+                            display: "block",
+                          }}
+                          alt=""
+                        />
                       </Link>
                     </SwiperSlide>
                   ))}
