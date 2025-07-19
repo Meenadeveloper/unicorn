@@ -128,11 +128,14 @@ const PropertyListingGrid = ({item}) => {
                 <i className="fa-solid fa-code-compare"></i>
               </Link> */}
               <Link
-                to="#"
+                to="https://wa.me/1234567890" // Replace with your actual WhatsApp number
+                target="_blank"
+                rel="noopener noreferrer"
                 className="square--50 circle text-success bg-light-success me-2"
               >
-                <i className="fa-solid fa-envelope-open-text"></i>
+                <i className="fa-brands fa-whatsapp"></i>
               </Link>
+
               <Link
                 to="#"
                 className="square--50 circle text-danger bg-light-danger"

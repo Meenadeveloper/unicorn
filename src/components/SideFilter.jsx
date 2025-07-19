@@ -34,7 +34,7 @@ const SideFilter = ({show,  setShow}) => {
                     </div>
                 </div>
                 
-                <div className="position-relative d-flex flex-xl-row flex-column align-items-center">
+                {/* <div className="position-relative d-flex flex-xl-row flex-column align-items-center">
                     <div className="verifyd-prt-block flex-fill full-width my-1 me-1">
                         <div className="d-flex align-items-center justify-content-center justify-content-between border rounded-3 px-2 py-3">
                             <div className="eliok-cliops d-flex align-items-center">
@@ -69,7 +69,7 @@ const SideFilter = ({show,  setShow}) => {
                         </div>
                         
                     </div>
-                </div>
+                </div> */}
                 
                 <div className="filter_wraps">
                     <div className="single_search_boxed">
@@ -276,7 +276,7 @@ const SideFilter = ({show,  setShow}) => {
                     </div>
                     
                     
-                    <div className="single_search_boxed">
+                    {/* <div className="single_search_boxed">
                         <div className="widget-boxed-header">
                             <h4>
                                 <Link to="#" onClick={()=>setOpen5(!open5)} className={open5 ? '' : 'collapsed'}>Mood<span className="selected">Any Mood</span></Link>
@@ -324,7 +324,7 @@ const SideFilter = ({show,  setShow}) => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     
                     
                     <div className="single_search_boxed">

@@ -29,7 +29,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/propert-list" element={<PropertyList />} />
+        <Route path="/property-list" element={<PropertyList />} />
         <Route path="/property-detail/:id" element={<PropertyDescription />} />
         <Route path="user/my-profile" element={<MyProfile />} />
         <Route path="user/wishlist" element={<Wishlist />} />
