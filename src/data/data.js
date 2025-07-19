@@ -77,6 +77,97 @@ import tour3 from "../assets/img/tour-3.jpg";
 import tour4 from "../assets/img/tour-4.jpg";
 import tour5 from "../assets/img/tour-5.jpg";
 
+import commercial from "../assets/img/icons/Whole Buildings.png"
+import apartment from "../assets/img/icons/Apartments.png";
+import townhouse from "../assets/img/icons/Townhouses.png";
+import vila from "../assets/img/icons/Villas.png";
+import land from "../assets/img/icons/Land.png";
+import warehouse from "../assets/img/icons/Compounds.png";
+import privatehouse from "../assets/img/icons/Villas.png";
+import building from "../assets/img/icons/Bulk Sale Units.png";
+import bunglow from "../assets/img/icons/bungalows.png";
+import openhouse from "../assets/img/icons/Duplexes.png";
+import hotel from "../assets/img/icons/Hotel Apartments.png";
+
+export const propertyType = [
+  {
+    icon: "fa-solid fa-house-laptop",
+    img: commercial,
+    name: "Commercial",
+    property: "12 Properties",
+  },
+  {
+    icon: "fa-solid fa-building",
+    img: apartment,
+
+    name: "Apartment",
+    property: "16 Properties",
+  },
+  {
+    icon: "fa-solid fa-building-shield",
+    img: townhouse,
+
+    name: "Townhouse",
+    property: "22 Properties",
+  },
+  {
+    icon: "fa-solid fa-synagogue",
+    img: vila,
+
+    name: "Villa",
+    property: "18 Properties",
+  },
+  {
+    icon: "fa-solid fa-mosque",
+    img: warehouse,
+
+    name: "Offices",
+    property: "42 Properties",
+  },
+  {
+    icon: "fa-solid fa-tree-city",
+    img: hotel,
+
+    name: "Warehouses",
+    property: "63 Properties",
+  },
+  {
+    icon: "fa-solid fa-house",
+    img: privatehouse,
+    name: "Private House",
+    property: "12 Properties",
+  },
+  {
+    icon: "fa-solid fa-landmark-dome",
+    img: openhouse,
+    name: "Openhouse",
+    property: "16 Properties",
+  },
+  {
+    icon: "fa-solid fa-city",
+    img: hotel,
+    name: "Building",
+    property: "19 Properties",
+  },
+  {
+    icon: "fa-solid fa-warehouse",
+    img: building,
+    name: "Shops",
+    property: "17 Properties",
+  },
+  {
+    icon: "fa-solid fa-shop-lock",
+    img: bunglow,
+    name: "Studio",
+    property: "10 Properties",
+  },
+  {
+    icon: "fa-solid fa-building-columns",
+    img: land,
+    name: "Lands",
+    property: "31 Properties",
+  },
+];
 export const navProperty = [
   {
     image: p1,
@@ -259,23 +350,24 @@ export const propertyData = [
 export const workData = [
   {
     image: work1,
-    title: "Evaluate Property",
-    desc: "Cicero famously orated against his political opponent Lucius Sergius Catilina. Occasionally the first Oration against Catiline is taken specimens.",
+    title: "Plan Your Strategy",
+    desc: "Define your goals, identify your audience, and map out a clear path to success with a well-structured plan.",
     bg: "f-light-success",
   },
   {
     image: work2,
-    title: "Meet Your Agent",
-    desc: "Cicero famously orated against his political opponent Lucius Sergius Catilina. Occasionally the first Oration against Catiline is taken specimens.",
+    title: "Collaborate with Experts",
+    desc: "Work alongside skilled professionals to bring your ideas to life and ensure high-quality execution.",
     bg: "f-light-warning",
   },
   {
     image: work3,
-    title: "Close The Deal",
-    desc: "Cicero famously orated against his political opponent Lucius Sergius Catilina. Occasionally the first Oration against Catiline is taken specimens.",
+    title: "Launch & Optimize",
+    desc: "Execute your strategy, measure performance, and continuously improve for long-term growth.",
     bg: "f-light-purple",
   },
 ];
+
 
 export const bestLoction = [
   {
@@ -324,39 +416,40 @@ export const clientData = [
   {
     image: client1,
     quote: "bg-primary",
-    desc: "Cicero famously orated against his political opponent Lucius Sergius Catilina. Occasionally the first Oration against Catiline is taken specimens.",
+    desc: "Finding our dream home was effortless thanks to this platform. The listings were accurate, and the agents were incredibly helpful throughout the process.",
     name: "Adam Williams",
-    position: "CEO Of Microwoft",
+    position: "Home Buyer, New York",
   },
   {
     image: client2,
     quote: "bg-success",
-    desc: "Cicero famously orated against his political opponent Lucius Sergius Catilina. Occasionally the first Oration against Catiline is taken specimens.",
+    desc: "We sold our property faster than expected and at a great price. Highly recommend this team for anyone looking to sell their home.",
     name: "Retha Deowalim",
-    position: "CEO Of Apple",
+    position: "Property Seller, California",
   },
   {
     image: client3,
     quote: "bg-purple",
-    desc: "Cicero famously orated against his political opponent Lucius Sergius Catilina. Occasionally the first Oration against Catiline is taken specimens.",
+    desc: "As a first-time homebuyer, I was nervous. But the team guided me every step of the way. I'm now a proud homeowner!",
     name: "Sam J. Wasim",
-    position: "Pio Founder",
+    position: "First-Time Buyer, Texas",
   },
   {
     image: client4,
     quote: "bg-seegreen",
-    desc: "Cicero famously orated against his political opponent Lucius Sergius Catilina. Occasionally the first Oration against Catiline is taken specimens.",
+    desc: "Great experience renting through this portal. Smooth process, verified listings, and professional support made all the difference.",
     name: "Usan Gulwarm",
-    position: "CEO Of Facewarm",
+    position: "Tenant, Florida",
   },
   {
     image: client5,
     quote: "bg-danger",
-    desc: "Cicero famously orated against his political opponent Lucius Sergius Catilina. Occasionally the first Oration against Catiline is taken specimens.",
+    desc: "I invested in a commercial space through this site and was impressed by the transparency and expert advice provided.",
     name: "Shilpa Shethy",
-    position: "CEO Of Zapple",
+    position: "Real Estate Investor, Chicago",
   },
 ];
+
 
 export const pricingData = [
   {
@@ -490,45 +583,46 @@ export const blogData = [
     id: 1,
     image: p19,
     date: "13th Sept 2025",
-    title: "Why people choose listio for own properties",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    title: "Why People Choose Listio to Buy or Sell Properties",
+    desc: "Explore how Listio makes property transactions easier with expert guidance, verified listings, and trusted agents.",
   },
   {
     id: 2,
     image: p20,
     date: "29th Nov 2025",
-    title: "List of benifits and impressive Resido services",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    title: "Top Benefits of Choosing Resido Property Services",
+    desc: "From smart search filters to dedicated support, discover the advantages of using Resido for your property needs.",
   },
   {
     id: 3,
     image: p21,
     date: "29th Dec 2025",
-    title: "What people says about listio properties",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    title: "What Clients Say About Their Property Journey with Listio",
+    desc: "Read real stories and testimonials from clients who bought, sold, or rented through Listio and loved the experience.",
   },
   {
     id: 4,
     image: p22,
     date: "13th March 2025",
-    title: "Why people choose listio for own properties",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    title: "How Listio Simplifies Property Ownership",
+    desc: "Learn how our platform streamlines the property search, verification, and documentation process for homebuyers.",
   },
   {
     id: 5,
     image: p23,
     date: "5th May 2025",
-    title: "List of benifits and impressive Resido services",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    title: "Why Investors Trust Resido for Real Estate Deals",
+    desc: "See how Resido helps real estate investors find high-return properties and make data-driven decisions.",
   },
   {
     id: 6,
     image: p24,
     date: "19th June 2025",
-    title: "What people says about listio properties",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    title: "Customer Feedback: What Makes Listio Stand Out",
+    desc: "Our clients share their experiences—discover what makes Listio a preferred platform for buying and selling homes.",
   },
 ];
+
 
 export const explorePlace = [
   {
@@ -598,68 +692,7 @@ export const explorePlace = [
   },
 ];
 
-export const propertyType = [
-  {
-    icon: "fa-solid fa-house-laptop",
-    name: "Commercial",
-    property: "12 Properties",
-  },
-  {
-    icon: "fa-solid fa-building",
-    name: "Apartment",
-    property: "16 Properties",
-  },
-  {
-    icon: "fa-solid fa-building-shield",
-    name: "Townhouse",
-    property: "22 Properties",
-  },
-  {
-    icon: "fa-solid fa-synagogue",
-    name: "Villa",
-    property: "18 Properties",
-  },
-  {
-    icon: "fa-solid fa-mosque",
-    name: "Offices",
-    property: "42 Properties",
-  },
-  {
-    icon: "fa-solid fa-tree-city",
-    name: "Warehouses",
-    property: "63 Properties",
-  },
-  {
-    icon: "fa-solid fa-house",
-    name: "Private House",
-    property: "12 Properties",
-  },
-  {
-    icon: "fa-solid fa-landmark-dome",
-    name: "Openhouse",
-    property: "16 Properties",
-  },
-  {
-    icon: "fa-solid fa-city",
-    name: "Building",
-    property: "19 Properties",
-  },
-  {
-    icon: "fa-solid fa-warehouse",
-    name: "Shops",
-    property: "17 Properties",
-  },
-  {
-    icon: "fa-solid fa-shop-lock",
-    name: "Studio",
-    property: "10 Properties",
-  },
-  {
-    icon: "fa-solid fa-building-columns",
-    name: "Condos",
-    property: "31 Properties",
-  },
-];
+
 
 export const categoriesData = [
   {

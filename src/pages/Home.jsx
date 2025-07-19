@@ -3,7 +3,7 @@ import Navbar from '../components/navbar/Navbar'
 import { Link } from 'react-router-dom';
 import Select from 'react-select';
 
-import bg from '../assets/img/bg-1.jpg'
+import bg from '../assets/img/homebanner.jpeg'
 import map from '../assets/img/pin.svg'
 import HowItsWork from '../components/home/HowItsWork';
 import RecentPropertyList from '../components/home/RecentPropertyList';
@@ -163,11 +163,12 @@ const Home = () => {
           <div className="row justify-content-center">
             <div className="col-xl-6 col-lg-7 col-md-10 text-center">
               <div className="sec-heading center">
-                <h2>Explore Recent properties</h2>
+                <h2>Explore Recent Properties</h2>
                 <p>
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                  blanditiis praesentium voluptatum deleniti atque corrupti quos
-                  dolores
+                  Discover the latest listings in your area, from modern
+                  apartments to spacious family homes. Find your ideal property
+                  with our most recent additions tailored to meet every
+                  lifestyle and budget.
                 </p>
               </div>
             </div>
@@ -177,7 +178,10 @@ const Home = () => {
 
           <div className="row align-items-center justify-content-center">
             <div className="col-lg-12 col-md-12 col-sm-12 text-center mt-5">
-              <Link to="/property-list" className="btn btn-primary px-md-5 rounded ">
+              <Link
+                to="/property-list"
+                className="btn btn-primary px-md-5 rounded "
+              >
                 Browse More Properties
               </Link>
             </div>
@@ -192,9 +196,9 @@ const Home = () => {
               <div className="sec-heading text-center">
                 <h2>Choose Property Type</h2>
                 <p>
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                  blanditiis praesentium voluptatum deleniti atque corrupti quos
-                  dolores
+                  Browse a variety of property types including apartments,
+                  villas, commercial spaces, and plots. Select the one that best
+                  suits your lifestyle, needs, and investment goals.
                 </p>
               </div>
             </div>
@@ -210,9 +214,10 @@ const Home = () => {
               <div className="sec-heading center">
                 <h2>Featured Property For Sale</h2>
                 <p>
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                  blanditiis praesentium voluptatum deleniti atque corrupti quos
-                  dolores
+                  Explore top-rated properties handpicked for their prime
+                  locations, modern amenities, and excellent value. Find your
+                  perfect home or investment opportunity among our featured
+                  listings.
                 </p>
               </div>
             </div>
@@ -238,9 +243,9 @@ const Home = () => {
               <div className="sec-heading center">
                 <h2>Find Best Locations</h2>
                 <p>
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                  blanditiis praesentium voluptatum deleniti atque corrupti quos
-                  dolores
+                  Discover prime neighborhoods with excellent connectivity,
+                  top-rated schools, and thriving communities. Choose the
+                  perfect location that fits your lifestyle and future plans.
                 </p>
               </div>
             </div>
@@ -266,9 +271,9 @@ const Home = () => {
               <div className="sec-heading center">
                 <h2>Good Reviews by Customers</h2>
                 <p>
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                  blanditiis praesentium voluptatum deleniti atque corrupti quos
-                  dolores
+                  Hear from our satisfied clients who found their dream homes
+                  and made smart investments with our trusted property services.
+                  Your success story could be next!
                 </p>
               </div>
             </div>
@@ -285,8 +290,12 @@ const Home = () => {
           <div className="row justify-content-center">
             <div className="col-lg-7 col-md-10 text-center">
               <div className="sec-heading center">
-                <h2>Latest Updates By Resido</h2>
-                {/* <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p> */}
+                <h2>Latest Property Updates</h2>
+                <p>
+                  Stay informed with the newest property listings, market
+                  trends, and real estate news. Don’t miss out on the latest
+                  opportunities in your preferred locations.
+                </p>
               </div>
             </div>
           </div>

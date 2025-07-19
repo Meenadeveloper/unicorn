@@ -10,7 +10,8 @@ const PropertyType = () => {
                     <div className="classical-cats-wrap style_2 shadows">
                         <Link to="#" className="classical-cats-boxs bg-white rounded-4 px-3 py-4">
                             <div className="classical-cats-icon circle bg-light-info text-primary fs-2">
-                                <i className={item.icon}></i>
+                                {/* <i className={item.icon}></i> */}
+                                <img src={item.img} style={{width:"50px", height:"50px"}} />
                             </div>
                             <div className="classical-cats-wrap-content">
                                 <h4>{item.name}</h4>

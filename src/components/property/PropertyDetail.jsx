@@ -237,244 +237,385 @@ const PropertyDetail = () => {
     ]
 
     return (
-        <>
-            <div className="property_block_wrap style-2">
-                <div className="property_block_wrap_header">
-                    <Link to="#" onClick={() => setOpen(!open)} className={open ? '' : 'collapsed'}><h4 className="property_block_title">Detail & Features</h4></Link>
-                </div>
-                <div id="clOne" className={`panel-collapse collapse ${open ? 'show' : ''}`}>
-                    <div className="block-body">
-                        <ul className="deatil_features">
-                            {propertyFeature.map((item, index) => {
-                                return (
-                                    <li key={index}><strong>{item.title}</strong>{item.value}</li>
-                                )
-                            })}
-                        </ul>
-                    </div>
-                </div>
+      <>
+        <div className="property_block_wrap style-2">
+          <div className="property_block_wrap_header">
+            <Link
+              to="#"
+              onClick={() => setOpen(!open)}
+              className={open ? "" : "collapsed"}
+            >
+              <h4 className="property_block_title">Detail & Features</h4>
+            </Link>
+          </div>
+          <div
+            id="clOne"
+            className={`panel-collapse collapse ${open ? "show" : ""}`}
+          >
+            <div className="block-body">
+              <ul className="deatil_features">
+                {propertyFeature.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <strong>{item.title}</strong>
+                      {item.value}
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
+          </div>
+        </div>
 
-            <div className="property_block_wrap style-2">
-                <div className="property_block_wrap_header">
-                    <Link to="#" onClick={() => setOpen2(!open2)} className={open2 ? '' : 'collapsed'}><h4 className="property_block_title">Description</h4></Link>
-                </div>
-                <div id="clTwo" className={`panel-collapse collapse ${open2 ? 'show' : ''}`}>
-                    <div className="block-body">
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    </div>
-                </div>
+        <div className="property_block_wrap style-2">
+          <div className="property_block_wrap_header">
+            <Link
+              to="#"
+              onClick={() => setOpen2(!open2)}
+              className={open2 ? "" : "collapsed"}
+            >
+              <h4 className="property_block_title">Description</h4>
+            </Link>
+          </div>
+          <div
+            id="clTwo"
+            className={`panel-collapse collapse ${open2 ? "show" : ""}`}
+          >
+            <div className="block-body">
+              <p>
+                There are countless property platforms online, but what sets us
+                apart is our commitment to verified listings, transparent
+                communication, and personalized service. Whether you're buying,
+                selling, or renting, we ensure a smooth, hassle-free experience
+                with professional guidance every step of the way.
+              </p>
+              <p>
+                From residential homes to commercial investments, our platform
+                connects you with the right opportunities. Explore detailed
+                property insights, trusted agent support, and user-friendly
+                tools designed to help you make informed real estate decisions.
+              </p>
             </div>
+          </div>
+        </div>
 
-            <div className="property_block_wrap style-2">
-                <div className="property_block_wrap_header">
-                    <Link to="#" onClick={() => setOpen3(!open3)} className={open3 ? '' : 'collapsed'}><h4 className="property_block_title">Ameneties</h4></Link>
-                </div>
-                <div id="clThree" className={`panel-collapse collapse ${open3 ? 'show' : ''}`}>
-                    <div className="block-body">
-                        <ul className="avl-features third color">
-                            <li>Air Conditioning</li>
-                            <li>Swimming Pool</li>
-                            <li>Central Heating</li>
-                            <li>Laundry Room</li>
-                            <li>Gym</li>
-                            <li>Alarm</li>
-                            <li>Window Covering</li>
-                            <li>Internet</li>
-                            <li>Pets Allow</li>
-                            <li>Free WiFi</li>
-                            <li>Car Parking</li>
-                            <li>Spa & Massage</li>
-                        </ul>
-                    </div>
-                </div>
+        <div className="property_block_wrap style-2">
+          <div className="property_block_wrap_header">
+            <Link
+              to="#"
+              onClick={() => setOpen3(!open3)}
+              className={open3 ? "" : "collapsed"}
+            >
+              <h4 className="property_block_title">Ameneties</h4>
+            </Link>
+          </div>
+          <div
+            id="clThree"
+            className={`panel-collapse collapse ${open3 ? "show" : ""}`}
+          >
+            <div className="block-body">
+              <ul className="avl-features third color">
+                <li>Air Conditioning</li>
+                <li>Swimming Pool</li>
+                <li>Central Heating</li>
+                <li>Laundry Room</li>
+                <li>Gym</li>
+                <li>Alarm</li>
+                <li>Window Covering</li>
+                <li>Internet</li>
+                <li>Pets Allow</li>
+                <li>Free WiFi</li>
+                <li>Car Parking</li>
+                <li>Spa & Massage</li>
+              </ul>
             </div>
+          </div>
+        </div>
 
-            <div className="property_block_wrap style-2">
-                <div className="property_block_wrap_header">
-                    <Link to="#" onClick={() => setOpen4(!open4)} className={open4 ? '' : 'collapsed'}><h4 className="property_block_title">Property video</h4></Link>
-                </div>
+        <div className="property_block_wrap style-2">
+          <div className="property_block_wrap_header">
+            <Link
+              to="#"
+              onClick={() => setOpen4(!open4)}
+              className={open4 ? "" : "collapsed"}
+            >
+              <h4 className="property_block_title">Property video</h4>
+            </Link>
+          </div>
 
-                <div id="clFour" className={`panel-collapse collapse ${open4 ? 'show' : ''}`}>
-                    <div className="block-body">
-                        <div className="property_video">
-                            <div className="thumb">
-                                <img className="pro_img img-fluid w100" src={image1} alt="7.jpg" />
-                                <div className="overlay_icon">
-                                    <div className="bb-video-box">
-                                        <div className="bb-video-box-inner">
-                                            <div className="bb-video-box-innerup">
-                                                <Link to="#" onClick={() => setIsOpen(true)} className="text-primary"><i className="fa-solid fa-play"></i></Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+          <div
+            id="clFour"
+            className={`panel-collapse collapse ${open4 ? "show" : ""}`}
+          >
+            <div className="block-body">
+              <div className="property_video">
+                <div className="thumb">
+                  <img
+                    className="pro_img img-fluid w100"
+                    src={image1}
+                    alt="7.jpg"
+                  />
+                  <div className="overlay_icon">
+                    <div className="bb-video-box">
+                      <div className="bb-video-box-inner">
+                        <div className="bb-video-box-innerup">
+                          <Link
+                            to="#"
+                            onClick={() => setIsOpen(true)}
+                            className="text-primary"
+                          >
+                            <i className="fa-solid fa-play"></i>
+                          </Link>
                         </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-                <ModalVideo
-                    channel="youtube"
-                    youtube={{ mute: 0, autoplay: 0 }}
-                    isOpen={isOpen}
-                    videoId="yba7hPeTSjk"
-                    onClose={() => setIsOpen(false)}
-                />
+              </div>
             </div>
+          </div>
+          <ModalVideo
+            channel="youtube"
+            youtube={{ mute: 0, autoplay: 0 }}
+            isOpen={isOpen}
+            videoId="yba7hPeTSjk"
+            onClose={() => setIsOpen(false)}
+          />
+        </div>
 
-            <div className="property_block_wrap style-2">
-                <div className="property_block_wrap_header">
-                    <Link to="#" onClick={() => setOpen5(!open5)} className={open5 ? '' : 'collapsed'}><h4 className="property_block_title">Floor Plan</h4></Link>
-                </div>
-                <div id="clFive" className={`panel-collapse collapse ${open5 ? 'show' : ''}`}>
-                    <div className="block-body">
-                        <div className="accordion" id="floor-option">
-                            <div className="card">
-                                <div className="card-header" id="firstFloor">
-                                    <h2 className="mb-0">
-                                        <button type="button" onClick={() => setShow(!show)} className={`btn btn-link ${show ? '' : 'collapsed'}`} >First Floor<span>740 sq ft</span></button>
-                                    </h2>
-                                </div>
-                                <div id="firstfloor" className={`collapse ${show ? 'show' : ''}`}>
-                                    <div className="card-body">
-                                        <img src={floor} className="img-fluid" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="card">
-                                <div className="card-header" id="seconfFloor">
-                                    <h2 className="mb-0">
-                                        <button type="button" onClick={() => setShow2(!show2)} className={`btn btn-link ${show2 ? '' : 'collapsed'}`}>Second Floor<span>710 sq ft</span></button>
-                                    </h2>
-                                </div>
-                                <div id="secondfloor" className={`collapse ${show2 ? 'show' : ''}`}>
-                                    <div className="card-body">
-                                        <img src={floor} className="img-fluid" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="card">
-                                <div className="card-header" id="third-garage">
-                                    <h2 className="mb-0">
-                                        <button type="button" onClick={() => setShow3(!show3)} className={`btn btn-link ${show3 ? '' : 'collapsed'}`}>Garage<span>520 sq ft</span></button>
-                                    </h2>
-                                </div>
-                                <div id="garages" className={`collapse ${show3 ? 'show' : ''}`}>
-                                    <div className="card-body">
-                                        <img src={floor} className="img-fluid" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <div className="property_block_wrap style-2">
+          <div className="property_block_wrap_header">
+            <Link
+              to="#"
+              onClick={() => setOpen5(!open5)}
+              className={open5 ? "" : "collapsed"}
+            >
+              <h4 className="property_block_title">Floor Plan</h4>
+            </Link>
+          </div>
+          <div
+            id="clFive"
+            className={`panel-collapse collapse ${open5 ? "show" : ""}`}
+          >
+            <div className="block-body">
+              <div className="accordion" id="floor-option">
+                <div className="card">
+                  <div className="card-header" id="firstFloor">
+                    <h2 className="mb-0">
+                      <button
+                        type="button"
+                        onClick={() => setShow(!show)}
+                        className={`btn btn-link ${show ? "" : "collapsed"}`}
+                      >
+                        First Floor<span>740 sq ft</span>
+                      </button>
+                    </h2>
+                  </div>
+                  <div
+                    id="firstfloor"
+                    className={`collapse ${show ? "show" : ""}`}
+                  >
+                    <div className="card-body">
+                      <img src={floor} className="img-fluid" alt="" />
                     </div>
+                  </div>
                 </div>
-            </div>
-
-            <div className="property_block_wrap style-2">
-                <div className="property_block_wrap_header">
-                    <Link to="#" onClick={() => setOpen6(!open6)} className={open6 ? '' : 'collapsed'}><h4 className="property_block_title">Location</h4></Link>
-                </div>
-                <div id="clSix" className={`panel-collapse collapse ${open6 ? 'show' : ''}`}>
-                    <div className="block-body">
-                        <div className="map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.3838103135677!2d80.87929001488125!3d26.827742183164247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfe8bc34b51bb%3A0xa3ca86eec63f6f8!2sINFOSYS%20DIGITAL%20COMPUTER%20(Prabhat%20Computer%20Classes)!5e0!3m2!1sen!2sin!4v1680238790732!5m2!1sen!2sin" width="100%" height="450" style={{ border: '0' }} loading="lazy" title='myframe'></iframe>
-                        </div>
+                <div className="card">
+                  <div className="card-header" id="seconfFloor">
+                    <h2 className="mb-0">
+                      <button
+                        type="button"
+                        onClick={() => setShow2(!show2)}
+                        className={`btn btn-link ${show2 ? "" : "collapsed"}`}
+                      >
+                        Second Floor<span>710 sq ft</span>
+                      </button>
+                    </h2>
+                  </div>
+                  <div
+                    id="secondfloor"
+                    className={`collapse ${show2 ? "show" : ""}`}
+                  >
+                    <div className="card-body">
+                      <img src={floor} className="img-fluid" alt="" />
                     </div>
+                  </div>
                 </div>
+                <div className="card">
+                  <div className="card-header" id="third-garage">
+                    <h2 className="mb-0">
+                      <button
+                        type="button"
+                        onClick={() => setShow3(!show3)}
+                        className={`btn btn-link ${show3 ? "" : "collapsed"}`}
+                      >
+                        Garage<span>520 sq ft</span>
+                      </button>
+                    </h2>
+                  </div>
+                  <div
+                    id="garages"
+                    className={`collapse ${show3 ? "show" : ""}`}
+                  >
+                    <div className="card-body">
+                      <img src={floor} className="img-fluid" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
 
-            <div className="property_block_wrap style-2">
-                <div className="property_block_wrap_header">
-                    <Link to="#" onClick={() => setOpen7(!open7)} className={open7 ? '' : 'collapsed'}><h4 className="property_block_title">Gallery</h4></Link>
-                </div>
+        <div className="property_block_wrap style-2">
+          <div className="property_block_wrap_header">
+            <Link
+              to="#"
+              onClick={() => setOpen6(!open6)}
+              className={open6 ? "" : "collapsed"}
+            >
+              <h4 className="property_block_title">Location</h4>
+            </Link>
+          </div>
+          <div
+            id="clSix"
+            className={`panel-collapse collapse ${open6 ? "show" : ""}`}
+          >
+            <div className="block-body">
+              <div className="map-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.3838103135677!2d80.87929001488125!3d26.827742183164247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfe8bc34b51bb%3A0xa3ca86eec63f6f8!2sINFOSYS%20DIGITAL%20COMPUTER%20(Prabhat%20Computer%20Classes)!5e0!3m2!1sen!2sin!4v1680238790732!5m2!1sen!2sin"
+                  width="100%"
+                  height="450"
+                  style={{ border: "0" }}
+                  loading="lazy"
+                  title="myframe"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                <div id="clSev" className={`panel-collapse collapse ${open7 ? 'show' : ''}`}>
-                    <div className="block-body">
-                        <ul className="list-gallery-inline">
-                            {galleryImg.map((item, index) => {
-                                return (
-                                    <li key={index}>
-                                        <button 
-                                            type="button"
-                                            className="mfp-gallery" 
-                                            onClick={() => onImageClick(index)}
-                                            style={{
-                                                background: 'none',
-                                                border: 'none',
-                                                padding: 0,
-                                                cursor: 'pointer'
-                                            }}
-                                        >
-                                            <img src={item} className="img-fluid mx-auto" alt={`Gallery ${index + 1}`} />
-                                        </button>
-                                    </li>
-                                )
-                            })}
-                        </ul>
-                        
-                        <CustomLightbox
-                            images={galleryImg}
-                            currentIndex={currentImageIndex}
-                            isOpen={lightboxOpen}
-                            onClose={closeLightbox}
-                            onNext={nextImage}
-                            onPrev={prevImage}
+        <div className="property_block_wrap style-2">
+          <div className="property_block_wrap_header">
+            <Link
+              to="#"
+              onClick={() => setOpen7(!open7)}
+              className={open7 ? "" : "collapsed"}
+            >
+              <h4 className="property_block_title">Gallery</h4>
+            </Link>
+          </div>
+
+          <div
+            id="clSev"
+            className={`panel-collapse collapse ${open7 ? "show" : ""}`}
+          >
+            <div className="block-body">
+              <ul className="list-gallery-inline">
+                {galleryImg.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <button
+                        type="button"
+                        className="mfp-gallery"
+                        onClick={() => onImageClick(index)}
+                        style={{
+                          background: "none",
+                          border: "none",
+                          padding: 0,
+                          cursor: "pointer",
+                        }}
+                      >
+                        <img
+                          src={item}
+                          className="img-fluid mx-auto"
+                          alt={`Gallery ${index + 1}`}
                         />
-                    </div>
-                </div>
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+
+              <CustomLightbox
+                images={galleryImg}
+                currentIndex={currentImageIndex}
+                isOpen={lightboxOpen}
+                onClose={closeLightbox}
+                onNext={nextImage}
+                onPrev={prevImage}
+              />
             </div>
+          </div>
+        </div>
 
-            <div className="rating-overview">
-                <div className="rating-overview-box">
-                    <span className="rating-overview-box-total">4.2</span>
-                    <span className="rating-overview-box-percent">out of 5.0</span>
-                    <div className="star-rating" data-rating="5">
-                        <i className="fas fa-star fs-xs mx-1"></i><i className="fas fa-star fs-xs mx-1"></i><i className="fas fa-star fs-xs mx-1"></i><i className="fas fa-star fs-xs mx-1"></i><i className="fas fa-star fs-xs mx-1"></i>
-                    </div>
-                </div>
-
-                <div className="rating-bars">
-                    <div className="rating-bars-item">
-                        <span className="rating-bars-name">Service</span>
-                        <span className="rating-bars-inner">
-                            <span className="rating-bars-rating high" data-rating="4.7">
-                                <span className="rating-bars-rating-inner" style={{ width: '85%' }}></span>
-                            </span>
-                            <strong>4.7</strong>
-                        </span>
-                    </div>
-                    <div className="rating-bars-item">
-                        <span className="rating-bars-name">Value for Money</span>
-                        <span className="rating-bars-inner">
-                            <span className="rating-bars-rating good" data-rating="3.9">
-                                <span className="rating-bars-rating-inner" style={{ width: '75%' }}></span>
-                            </span>
-                            <strong>3.9</strong>
-                        </span>
-                    </div>
-                    <div className="rating-bars-item">
-                        <span className="rating-bars-name">Location</span>
-                        <span className="rating-bars-inner">
-                            <span className="rating-bars-rating mid" data-rating="3.2">
-                                <span className="rating-bars-rating-inner" style={{ width: '52.2%' }}></span>
-                            </span>
-                            <strong>3.2</strong>
-                        </span>
-                    </div>
-                    <div className="rating-bars-item">
-                        <span className="rating-bars-name">Cleanliness</span>
-                        <span className="rating-bars-inner">
-                            <span className="rating-bars-rating poor" data-rating="2.0">
-                                <span className="rating-bars-rating-inner" style={{ width: '20%' }}></span>
-                            </span>
-                            <strong>2.0</strong>
-                        </span>
-                    </div>
-                </div>
+        <div className="rating-overview">
+          <div className="rating-overview-box">
+            <span className="rating-overview-box-total">4.2</span>
+            <span className="rating-overview-box-percent">out of 5.0</span>
+            <div className="star-rating" data-rating="5">
+              <i className="fas fa-star fs-xs mx-1"></i>
+              <i className="fas fa-star fs-xs mx-1"></i>
+              <i className="fas fa-star fs-xs mx-1"></i>
+              <i className="fas fa-star fs-xs mx-1"></i>
+              <i className="fas fa-star fs-xs mx-1"></i>
             </div>
+          </div>
 
-            {/* <div className="property_block_wrap style-2">
+          <div className="rating-bars">
+            <div className="rating-bars-item">
+              <span className="rating-bars-name">Service</span>
+              <span className="rating-bars-inner">
+                <span className="rating-bars-rating high" data-rating="4.7">
+                  <span
+                    className="rating-bars-rating-inner"
+                    style={{ width: "85%" }}
+                  ></span>
+                </span>
+                <strong>4.7</strong>
+              </span>
+            </div>
+            <div className="rating-bars-item">
+              <span className="rating-bars-name">Value for Money</span>
+              <span className="rating-bars-inner">
+                <span className="rating-bars-rating good" data-rating="3.9">
+                  <span
+                    className="rating-bars-rating-inner"
+                    style={{ width: "75%" }}
+                  ></span>
+                </span>
+                <strong>3.9</strong>
+              </span>
+            </div>
+            <div className="rating-bars-item">
+              <span className="rating-bars-name">Location</span>
+              <span className="rating-bars-inner">
+                <span className="rating-bars-rating mid" data-rating="3.2">
+                  <span
+                    className="rating-bars-rating-inner"
+                    style={{ width: "52.2%" }}
+                  ></span>
+                </span>
+                <strong>3.2</strong>
+              </span>
+            </div>
+            <div className="rating-bars-item">
+              <span className="rating-bars-name">Cleanliness</span>
+              <span className="rating-bars-inner">
+                <span className="rating-bars-rating poor" data-rating="2.0">
+                  <span
+                    className="rating-bars-rating-inner"
+                    style={{ width: "20%" }}
+                  ></span>
+                </span>
+                <strong>2.0</strong>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* <div className="property_block_wrap style-2">
                 <div className="property_block_wrap_header">
                     <Link to="#" onClick={() => setOpen8(!open8)} className={open8 ? '' : 'collapsed'}><h4 className="property_block_title">102 Reviews</h4></Link>
                 </div>
@@ -644,46 +785,75 @@ const PropertyDetail = () => {
                 </div>
             </div> */}
 
-            <div className="property_block_wrap style-2">
-                <div className="property_block_wrap_header">
-                    <Link to="#" onClick={() => setOpen10(!open10)} className={open10 ? '' : 'collapsed'}><h4 className="property_block_title">Write a Review</h4></Link>
-                </div>
-                <div id="clTen" className={`panel-collapse collapse ${open10 ? 'show' : ''}`}>
-                    <div className="block-body">
-                        <form className="form-submit">
-                            <div className="row">
-                                <div className="col-lg-12 col-md-12 col-sm-12">
-                                    <div className="form-group">
-                                        <textarea className="form-control ht-80" placeholder="Messages"></textarea>
-                                    </div>
-                                </div>
-                                <div className="col-lg-12 col-md-12 col-sm-12">
-                                    <div className="form-group">
-                                        <Select options={rating} placeholder="Choose Ratting" className="form-control" />
-                                    </div>
-                                </div>
-                                <div className="col-lg-6 col-md-6 col-sm-12">
-                                    <div className="form-group">
-                                        <input type="text" className="form-control" placeholder="Your Name" />
-                                    </div>
-                                </div>
-                                <div className="col-lg-6 col-md-6 col-sm-12">
-                                    <div className="form-group">
-                                        <input type="email" className="form-control" placeholder="Your Email" />
-                                    </div>
-                                </div>
-                                <div className="col-lg-12 col-md-12 col-sm-12">
-                                    <div className="form-group">
-                                        <button className="btn btn-primary fw-medium px-lg-5 rounded" type="submit">Submit Review</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
+        <div className="property_block_wrap style-2">
+          <div className="property_block_wrap_header">
+            <Link
+              to="#"
+              onClick={() => setOpen10(!open10)}
+              className={open10 ? "" : "collapsed"}
+            >
+              <h4 className="property_block_title">Write a Review</h4>
+            </Link>
+          </div>
+          <div
+            id="clTen"
+            className={`panel-collapse collapse ${open10 ? "show" : ""}`}
+          >
+            <div className="block-body">
+              <form className="form-submit">
+                <div className="row">
+                  <div className="col-lg-12 col-md-12 col-sm-12">
+                    <div className="form-group">
+                      <textarea
+                        className="form-control ht-80"
+                        placeholder="Messages"
+                      ></textarea>
                     </div>
+                  </div>
+                  <div className="col-lg-12 col-md-12 col-sm-12">
+                    <div className="form-group">
+                      <Select
+                        options={rating}
+                        placeholder="Choose Ratting"
+                        className="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-lg-6 col-md-6 col-sm-12">
+                    <div className="form-group">
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Your Name"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-lg-6 col-md-6 col-sm-12">
+                    <div className="form-group">
+                      <input
+                        type="email"
+                        className="form-control"
+                        placeholder="Your Email"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-lg-12 col-md-12 col-sm-12">
+                    <div className="form-group">
+                      <button
+                        className="btn btn-primary fw-medium px-lg-5 rounded"
+                        type="submit"
+                      >
+                        Submit Review
+                      </button>
+                    </div>
+                  </div>
                 </div>
+              </form>
             </div>
-        </>
-    )
+          </div>
+        </div>
+      </>
+    );
 }
 
 export default PropertyDetail
