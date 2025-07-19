@@ -531,6 +531,13 @@ const PropertyDetail = () => {
                           src={item}
                           className="img-fluid mx-auto"
                           alt={`Gallery ${index + 1}`}
+                          style={{
+                            width: "100%", // Fixed width (adjust as needed)
+                            height: "170px", // Fixed height (adjust as needed)
+                            objectFit: "cover", // Ensures cropped fit without stretching
+                            borderRadius: "6px", // Optional: rounded corners
+                            display: "block",
+                          }}
                         />
                       </button>
                     </li>
