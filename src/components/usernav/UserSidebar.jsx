@@ -27,7 +27,7 @@ const UserSidebar = ({show, setShow}) => {
             <div className="d-user-avater">
               <img src={team1} className="img-fluid avater" alt="" />
               <h4>Adam Harshvardhan</h4>
-              <span>Canada USA</span>
+              <span>Qatar</span>
             </div>
             <div className="d-navigation">
               <ul>
