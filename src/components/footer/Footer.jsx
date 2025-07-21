@@ -62,7 +62,7 @@ const Footer = () => {
                     <Link to="/contact">Contact</Link>
                   </li>
                   <li>
-                    <Link to="/blogs">Blog</Link>
+                    <Link to="/">Blog</Link>
                   </li>
                 </ul>
               </div>
@@ -73,16 +73,16 @@ const Footer = () => {
                 <h4 className="widget-title">The Highlights</h4>
                 <ul className="footer-menu">
                   <li>
-                    <Link to="/propert-list">Buy</Link>
+                    <Link to="/property-list">Buy</Link>
                   </li>
                   <li>
-                    <Link to="/propert-list">Rent</Link>
+                    <Link to="/property-list">Rent</Link>
                   </li>
                   <li>
-                    <Link to="/propert-list">Feature Property</Link>
+                    <Link to="/property-list">Feature Property</Link>
                   </li>
                   <li>
-                    <Link to="/propert-list">Recent Property</Link>
+                    <Link to="/property-list">Recent Property</Link>
                   </li>
                 </ul>
               </div>

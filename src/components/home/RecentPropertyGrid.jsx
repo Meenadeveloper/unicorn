@@ -124,9 +124,9 @@ const RecentPropertyGrid = ({item,border}) => {
                     {item.name}
                   </Link>
                 </h4>
-                <div className="prt-location text-muted-2 d-flex">
+                <div className="prt-location text-muted-2 d-flex mb-2">
                   <img src={map} alt="" />
-                  {item.loction}
+                  {item.location}
                 </div>
               </div>
             </div>

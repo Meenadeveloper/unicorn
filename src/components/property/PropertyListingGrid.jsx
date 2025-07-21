@@ -110,7 +110,7 @@ const PropertyListingGrid = ({item}) => {
                 </h4>
                 <div className="prt-location text-muted-2 d-flex">
                   <img src={map} alt="" className="me-1" />
-                  {item.loction}
+                  {item.location}
                 </div>
               </div>
             </div>
@@ -130,7 +130,7 @@ const PropertyListingGrid = ({item}) => {
                 <i className="fa-solid fa-code-compare"></i>
               </Link> */}
               <Link
-                to="https://wa.me/1234567890" // Replace with your actual WhatsApp number
+                to="https://wa.me/+97466760543" // Replace with your actual WhatsApp number
                 target="_blank"
                 rel="noopener noreferrer"
                 className="square--50 circle text-success bg-light-success me-2"

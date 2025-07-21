@@ -18,18 +18,18 @@ import PropertyType from '../components/home/PropertyType';
 const Home = () => {
 
     const minprice = [
-        { value: '1', label: '$500' },
-        { value: '1', label: '$1000' },
-        { value: '1', label: '$1500' },
-        { value: '1', label: '$2000' },
-        { value: '1', label: '$3000' },
+      { value: "1", label: "QAR 500" },
+      { value: "1", label: "QAR 1000" },
+      { value: "1", label: "QAR 1500" },
+      { value: "1", label: "QAR 2000" },
+      { value: "1", label: "QAR 3000" },
     ];
     const maxprice = [
-        { value: '1', label: '$1000' },
-        { value: '1', label: '$1500' },
-        { value: '1', label: '$2000' },
-        { value: '1', label: '$3000' },
-        { value: '1', label: '$3000' },
+      { value: "1", label: "QAR 1000" },
+      { value: "1", label: "QAR 1500" },
+      { value: "1", label: "QAR 2000" },
+      { value: "1", label: "QAR 3000" },
+      { value: "1", label: "QAR 3000" },
     ];
 
     const propertyType = [
@@ -46,15 +46,16 @@ const Home = () => {
         { value: '1', label: '4' },
         { value: '1', label: '5' },
     ]
-    const loction = [
-        { value: '1', label: 'Los Angeles, CA' },
-        { value: '1', label: 'New York City, NY' },
-        { value: '1', label: 'Chicago, IL' },
-        { value: '1', label: 'Houston, TX' },
-        { value: '1', label: 'Philadelphia, PA' },
-        { value: '1', label: 'San Antonio, TX' },
-        { value: '1', label: 'San Jose, CA' },
-    ]
+   const loction = [
+     { value: "1", label: "Doha" },
+     { value: "2", label: "Al Rayyan" },
+     { value: "3", label: "Al Wakrah" },
+     { value: "4", label: "Umm Salal" },
+     { value: "5", label: "Al Khor" },
+     { value: "6", label: "Al Daayen" },
+     { value: "7", label: "Madinat ash Shamal" },
+   ];
+
 
 
   return (

@@ -13,7 +13,7 @@ const DetailSidebar = () => {
           <ul className="like_share_list">
             <li>
               <a
-                href="https://wa.me/12345566776?text=Hello%2C%20I%20am%20interested%20in%20your%20service"
+                href="https://wa.me/+97466760543?text=Hello%2C%20I%20am%20interested%20in%20your%20service"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-likes"
@@ -25,7 +25,7 @@ const DetailSidebar = () => {
             </li>
             <li>
               <a
-                href="tel:12345566776"
+                href="tel:+97466760543"
                 className="btn btn-likes"
                 data-toggle="tooltip"
                 data-original-title="Call"

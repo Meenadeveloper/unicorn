@@ -33,10 +33,15 @@ const FeatureProperty = ({border}) => {
                   </div>
                   <div className="listing-content">
                     <div className="listing-detail-wrapper-box">
-                      <div className="listing-detail-wrapper d-flex align-items-top justify-content-between"
-                        style={{ flexWrap:"wrap", gap:"10px",  }}>
+                      <div
+                        className="listing-detail-wrapper d-flex align-items-top justify-content-between"
+                        style={{ flexWrap: "wrap", gap: "10px" }}
+                      >
                         <div className="listing-short-detail ">
-                          <h4 className="listing-name mb-0 mt-0 text-truncate-1" style={{minHeight:"100% !important"}}>
+                          <h4
+                            className="listing-name mb-0 mt-0 text-truncate-1"
+                            style={{ minHeight: "100% !important" }}
+                          >
                             <Link to={`/property-detail/${item.id}`}>
                               {item.name}
                             </Link>
@@ -108,7 +113,7 @@ const FeatureProperty = ({border}) => {
                       <div className="listing-locate">
                         <span className="listing-location text-muted-2">
                           <i className="fa-solid fa-location-pin me-1"></i>
-                          {item.loction}
+                          {item.location}
                         </span>
                       </div>
                       <div className="listing-detail-btn">

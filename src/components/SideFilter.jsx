@@ -9,32 +9,64 @@ const SideFilter = ({show,  setShow}) => {
     let[open6, setOpen6] = useState(false)
   return (
     <>
-     <div className={`property-sidebar side_stiky simple-sidebar sm-sidebar ${show ? 'd-block' : ''}`} id="filter_search"  style={{left:'0'}}>							
-    
+      <div
+        className={`property-sidebar side_stiky simple-sidebar sm-sidebar ${
+          show ? "d-block" : ""
+        }`}
+        id="filter_search"
+        style={{ left: "0" }}
+      >
         <div className="search-sidebar_header">
-            <h4 className="ssh_heading">Close Filter</h4>
-            <button  className="w3-bar-item w3-button w3-large" onClick={()=>setShow}><i className="fa-regular fa-circle-xmark fs-5 text-muted-2"></i></button>
+          <h4 className="ssh_heading">Close Filter</h4>
+          <button
+            className="w3-bar-item w3-button w3-large"
+            onClick={() => setShow}
+          >
+            <i className="fa-regular fa-circle-xmark fs-5 text-muted-2"></i>
+          </button>
         </div>
-        
+
         <div className="sidebar-widgets ">
-            <div className="search-inner p-0">
-                <div className="filter-search-box">
-                    <div className="form-group">
-                        <div className="position-relative">
-                            <input type="text" className="form-control rounded-3 ps-5" placeholder="Search by space name…"/>
-                            <div className="position-absolute top-50 start-0 translate-middle-y ms-2">
-                                <span className="svg-icon text-primary svg-icon-2hx">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="currentColor"/>
-                                        <path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="currentColor"/>
-                                    </svg>
-                                </span>	
-                            </div>
-                        </div>
-                    </div>
+          <div className="search-inner p-0">
+            <div className="filter-search-box">
+              <div className="form-group">
+                <div className="position-relative">
+                  <input
+                    type="text"
+                    className="form-control rounded-3 ps-5"
+                    placeholder="Search by space name…"
+                  />
+                  <div className="position-absolute top-50 start-0 translate-middle-y ms-2">
+                    <span className="svg-icon text-primary svg-icon-2hx">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          opacity="0.5"
+                          x="17.0365"
+                          y="15.1223"
+                          width="8.15546"
+                          height="2"
+                          rx="1"
+                          transform="rotate(45 17.0365 15.1223)"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </span>
+                  </div>
                 </div>
-                
-                {/* <div className="position-relative d-flex flex-xl-row flex-column align-items-center">
+              </div>
+            </div>
+
+            {/* <div className="position-relative d-flex flex-xl-row flex-column align-items-center">
                     <div className="verifyd-prt-block flex-fill full-width my-1 me-1">
                         <div className="d-flex align-items-center justify-content-center justify-content-between border rounded-3 px-2 py-3">
                             <div className="eliok-cliops d-flex align-items-center">
@@ -70,213 +102,452 @@ const SideFilter = ({show,  setShow}) => {
                         
                     </div>
                 </div> */}
-                
-                <div className="filter_wraps">
-                    <div className="single_search_boxed">
-                        <div className="widget-boxed-header">
-                            <h4>
-                                <Link to="#" onClick={()=>setOpen(!open)} className={open ? '' : 'collapsed'}>Where<span className="selected">Chicago</span></Link>
-                            </h4>
+
+            <div className="filter_wraps">
+              <div className="single_search_boxed">
+                <div className="widget-boxed-header">
+                  <h4>
+                    <Link
+                      to="#"
+                      onClick={() => setOpen(!open)}
+                      className={open ? "" : "collapsed"}
+                    >
+                      Where<span className="selected">Chicago</span>
+                    </Link>
+                  </h4>
+                </div>
+                <div
+                  className={`widget-boxed-body collapse ${open ? "show" : ""}`}
+                  id="where"
+                >
+                  <div className="side-list no-border">
+                    <div className="single_filter_card">
+                      <div className="card-body pt-0">
+                        <div className="inner_widget_link">
+                          <ul className="no-ul-list filter-list">
+                            <li className="form-check">
+                              <input
+                                id="b1"
+                                className="form-check-input"
+                                name="where"
+                                type="radio"
+                              />
+                              <label htmlFor="b1" className="form-check-label">
+                                Doha
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="b2"
+                                className="form-check-input"
+                                name="where"
+                                type="radio"
+                              />
+                              <label htmlFor="b2" className="form-check-label">
+                                Al Rayyan
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="b3"
+                                className="form-check-input"
+                                name="where"
+                                type="radio"
+                              />
+                              <label htmlFor="b3" className="form-check-label">
+                                Al Wakrah
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="b4"
+                                className="form-check-input"
+                                name="where"
+                                type="radio"
+                                defaultChecked
+                              />
+                              <label htmlFor="b4" className="form-check-label">
+                                Umm Salal
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="b5"
+                                className="form-check-input"
+                                name="where"
+                                type="radio"
+                              />
+                              <label htmlFor="b5" className="form-check-label">
+                                Mesaieed
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="b6"
+                                className="form-check-input"
+                                name="where"
+                                type="radio"
+                              />
+                              <label htmlFor="b6" className="form-check-label">
+                                Dukhan
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="b7"
+                                className="form-check-input"
+                                name="where"
+                                type="radio"
+                              />
+                              <label htmlFor="b7" className="form-check-label">
+                                Al Khor
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="b8"
+                                className="form-check-input"
+                                name="where"
+                                type="radio"
+                              />
+                              <label htmlFor="b8" className="form-check-label">
+                                Lusail
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="b9"
+                                className="form-check-input"
+                                name="where"
+                                type="radio"
+                              />
+                              <label htmlFor="b9" className="form-check-label">
+                                Al Daayen
+                              </label>
+                            </li>
+                          </ul>
                         </div>
-                        <div className={`widget-boxed-body collapse ${open ? 'show' : ''}`} id="where">
-                            <div className="side-list no-border">
-                                <div className="single_filter_card">
-                                    <div className="card-body pt-0">
-                                        <div className="inner_widget_link">
-                                            <ul className="no-ul-list filter-list">
-                                                <li className="form-check">
-                                                    <input id="b1" className="form-check-input" name="where" type="radio"/>
-                                                    <label htmlFor="b1" className="form-check-label">Atlanta</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="b2" className="form-check-input" name="where" type="radio"/>
-                                                    <label htmlFor="b2" className="form-check-label">Austin</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="b3" className="form-check-input" name="where" type="radio"/>
-                                                    <label htmlFor="b3" className="form-check-label">Boston</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="b4" className="form-check-input" name="where" type="radio" defaultChecked/>
-                                                    <label htmlFor="b4" className="form-check-label">Chicago</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="b5" className="form-check-input" name="where" type="radio"/>
-                                                    <label htmlFor="b5" className="form-check-label">Dallas</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="b6" className="form-check-input" name="where" type="radio"/>
-                                                    <label htmlFor="b6" className="form-check-label">Denver</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="b7" className="form-check-input" name="where" type="radio"/>
-                                                    <label htmlFor="b7" className="form-check-label">Houston</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="b8" className="form-check-input" name="where" type="radio"/>
-                                                    <label htmlFor="b8" className="form-check-label">Jacksonville</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="b9" className="form-check-input" name="where" type="radio"/>
-                                                    <label htmlFor="b9" className="form-check-label">Los Angeles</label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                      </div>
                     </div>
-                    
-                    
-                    <div className="single_search_boxed">
-                        <div className="widget-boxed-header">
-                            <h4>
-                                <Link to="#" onClick={()=>setOpen2(!open2)} className={open2 ? '' : 'collapsed'}>Property Types<span className="selected">Apartment</span></Link>
-                            </h4>
-                            
+                  </div>
+                </div>
+              </div>
+
+              <div className="single_search_boxed">
+                <div className="widget-boxed-header">
+                  <h4>
+                    <Link
+                      to="#"
+                      onClick={() => setOpen2(!open2)}
+                      className={open2 ? "" : "collapsed"}
+                    >
+                      Property Types<span className="selected">Apartment</span>
+                    </Link>
+                  </h4>
+                </div>
+                <div
+                  className={`widget-boxed-body collapse ${
+                    open2 ? "show" : ""
+                  }`}
+                >
+                  <div className="side-list no-border">
+                    <div className="single_filter_card">
+                      <div className="card-body pt-0">
+                        <div className="inner_widget_link">
+                          <ul className="no-ul-list filter-list">
+                            <li className="form-check">
+                              <input
+                                id="c1"
+                                className="form-check-input"
+                                name="ptype"
+                                type="radio"
+                              />
+                              <label htmlFor="c1" className="form-check-label">
+                                House
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="c2"
+                                className="form-check-input"
+                                name="ptype"
+                                type="radio"
+                              />
+                              <label htmlFor="c2" className="form-check-label">
+                                Office Desk
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="c3"
+                                className="form-check-input"
+                                name="ptype"
+                                type="radio"
+                              />
+                              <label htmlFor="c3" className="form-check-label">
+                                Villa
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="c4"
+                                className="form-check-input"
+                                name="ptype"
+                                type="radio"
+                                defaultChecked
+                              />
+                              <label htmlFor="c4" className="form-check-label">
+                                Apartment
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="c5"
+                                className="form-check-input"
+                                name="ptype"
+                                type="radio"
+                              />
+                              <label htmlFor="c5" className="form-check-label">
+                                Condo
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="c6"
+                                className="form-check-input"
+                                name="ptype"
+                                type="radio"
+                              />
+                              <label htmlFor="c6" className="form-check-label">
+                                Denver
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="c7"
+                                className="form-check-input"
+                                name="ptype"
+                                type="radio"
+                              />
+                              <label htmlFor="c7" className="form-check-label">
+                                Studio
+                              </label>
+                            </li>
+                          </ul>
                         </div>
-                        <div className={`widget-boxed-body collapse ${open2 ? 'show' : ''}`}>
-                            <div className="side-list no-border">
-                                
-                                <div className="single_filter_card">
-                                    <div className="card-body pt-0">
-                                        <div className="inner_widget_link">
-                                            <ul className="no-ul-list filter-list">
-                                                <li className="form-check">
-                                                    <input id="c1" className="form-check-input" name="ptype" type="radio"/>
-                                                    <label htmlFor="c1" className="form-check-label">House</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="c2" className="form-check-input" name="ptype" type="radio"/>
-                                                    <label htmlFor="c2" className="form-check-label">Office Desk</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="c3" className="form-check-input" name="ptype" type="radio"/>
-                                                    <label htmlFor="c3" className="form-check-label">Villa</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="c4" className="form-check-input" name="ptype" type="radio" defaultChecked/>
-                                                    <label htmlFor="c4" className="form-check-label">Apartment</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="c5" className="form-check-input" name="ptype" type="radio"/>
-                                                    <label htmlFor="c5" className="form-check-label">Condo</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="c6" className="form-check-input" name="ptype" type="radio"/>
-                                                    <label htmlFor="c6" className="form-check-label">Denver</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="c7" className="form-check-input" name="ptype" type="radio"/>
-                                                    <label htmlFor="c7" className="form-check-label">Studio</label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                      </div>
                     </div>
-                    
-                    
-                    <div className="single_search_boxed">
-                        <div className="widget-boxed-header">
-                            <h4>
-                                <Link to="#" onClick={()=>setOpen3(!open3)} className={open3 ? '' : 'collapsed'}>Bedrooms<span className="selected">2 Beds</span></Link>
-                            </h4>
+                  </div>
+                </div>
+              </div>
+
+              <div className="single_search_boxed">
+                <div className="widget-boxed-header">
+                  <h4>
+                    <Link
+                      to="#"
+                      onClick={() => setOpen3(!open3)}
+                      className={open3 ? "" : "collapsed"}
+                    >
+                      Bedrooms<span className="selected">2 Beds</span>
+                    </Link>
+                  </h4>
+                </div>
+                <div
+                  className={`widget-boxed-body collapse ${
+                    open3 ? "show" : ""
+                  }`}
+                >
+                  <div className="side-list no-border">
+                    <div className="single_filter_card">
+                      <div className="card-body pt-0">
+                        <div className="inner_widget_link">
+                          <ul className="no-ul-list filter-list">
+                            <li className="form-check">
+                              <input
+                                id="a1"
+                                className="form-check-input"
+                                name="bed"
+                                type="radio"
+                              />
+                              <label htmlFor="a1" className="form-check-label">
+                                01 Bedrooms
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="a2"
+                                className="form-check-input"
+                                name="bed"
+                                type="radio"
+                              />
+                              <label htmlFor="a2" className="form-check-label">
+                                02 Bedrooms
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="a3"
+                                className="form-check-input"
+                                name="bed"
+                                type="radio"
+                              />
+                              <label htmlFor="a3" className="form-check-label">
+                                03 Bedrooms
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="a4"
+                                className="form-check-input"
+                                name="bed"
+                                type="radio"
+                                defaultChecked
+                              />
+                              <label htmlFor="a4" className="form-check-label">
+                                04 Bedrooms
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="a5"
+                                className="form-check-input"
+                                name="bed"
+                                type="radio"
+                              />
+                              <label htmlFor="a5" className="form-check-label">
+                                05 Bedrooms
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="a6"
+                                className="form-check-input"
+                                name="bed"
+                                type="radio"
+                              />
+                              <label htmlFor="a6" className="form-check-label">
+                                06+ Bedrooms
+                              </label>
+                            </li>
+                          </ul>
                         </div>
-                        <div className={`widget-boxed-body collapse ${open3 ? 'show' : ''}`}>
-                            <div className="side-list no-border">
-                                <div className="single_filter_card">
-                                    <div className="card-body pt-0">
-                                        <div className="inner_widget_link">
-                                            <ul className="no-ul-list filter-list">
-                                                <li className="form-check">
-                                                    <input id="a1" className="form-check-input" name="bed" type="radio"/>
-                                                    <label htmlFor="a1" className="form-check-label">01 Bedrooms</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="a2" className="form-check-input" name="bed" type="radio"/>
-                                                    <label htmlFor="a2" className="form-check-label">02 Bedrooms</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="a3" className="form-check-input" name="bed" type="radio"/>
-                                                    <label htmlFor="a3" className="form-check-label">03 Bedrooms</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="a4" className="form-check-input" name="bed" type="radio" defaultChecked/>
-                                                    <label htmlFor="a4" className="form-check-label">04 Bedrooms</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="a5" className="form-check-input" name="bed" type="radio"/>
-                                                    <label htmlFor="a5" className="form-check-label">05 Bedrooms</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="a6" className="form-check-input" name="bed" type="radio"/>
-                                                    <label htmlFor="a6" className="form-check-label">06+ Bedrooms</label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                      </div>
                     </div>
-                    
-                    
-                    <div className="single_search_boxed">
-                        <div className="widget-boxed-header">
-                            <h4>
-                                <Link to="#" onClick={()=>setOpen4(!open4)} className={open4 ? '' : 'collapsed'}>Price Range<span className="selected">$10,000 - $15,000</span></Link>
-                            </h4>
-                            
+                  </div>
+                </div>
+              </div>
+
+              <div className="single_search_boxed">
+                <div className="widget-boxed-header">
+                  <h4>
+                    <Link
+                      to="#"
+                      onClick={() => setOpen4(!open4)}
+                      className={open4 ? "" : "collapsed"}
+                    >
+                      Price Range
+                      <span className="selected">QAR 10,000 - QAR 15,000</span>
+                    </Link>
+                  </h4>
+                </div>
+                <div
+                  className={`widget-boxed-body collapse ${
+                    open4 ? "show" : ""
+                  }`}
+                >
+                  <div className="side-list no-border">
+                    <div className="single_filter_card">
+                      <div className="card-body pt-0">
+                        <div className="inner_widget_link">
+                          <ul className="no-ul-list filter-list">
+                            <li className="form-check">
+                              <input
+                                id="e1"
+                                className="form-check-input"
+                                name="prices"
+                                type="radio"
+                              />
+                              <label htmlFor="e1" className="form-check-label">
+                                Less Then QAR 10,000
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="e2"
+                                className="form-check-input"
+                                name="prices"
+                                type="radio"
+                              />
+                              <label htmlFor="e2" className="form-check-label">
+                                QAR 10,000 - QAR 15,000
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="e3"
+                                className="form-check-input"
+                                name="prices"
+                                type="radio"
+                              />
+                              <label htmlFor="e3" className="form-check-label">
+                                QAR 12,000 - QAR 25,000
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="e4"
+                                className="form-check-input"
+                                name="prices"
+                                type="radio"
+                                defaultChecked
+                              />
+                              <label htmlFor="e4" className="form-check-label">
+                                QAR 30,000 - QAR 35,000
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="e5"
+                                className="form-check-input"
+                                name="prices"
+                                type="radio"
+                              />
+                              <label htmlFor="e5" className="form-check-label">
+                                QAR 40,000 - QAR 45,000
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="e6"
+                                className="form-check-input"
+                                name="prices"
+                                type="radio"
+                              />
+                              <label htmlFor="e6" className="form-check-label">
+                                QAR 50,000 - QAR 55,000
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="e7"
+                                className="form-check-input"
+                                name="prices"
+                                type="radio"
+                              />
+                              <label htmlFor="e7" className="form-check-label">
+                                QAR 60,000 - QAR 65,000
+                              </label>
+                            </li>
+                          </ul>
                         </div>
-                        <div className={`widget-boxed-body collapse ${open4 ? 'show' : ''}`}>
-                            <div className="side-list no-border">
-                                
-                                <div className="single_filter_card">
-                                    <div className="card-body pt-0">
-                                        <div className="inner_widget_link">
-                                            <ul className="no-ul-list filter-list">
-                                                <li className="form-check">
-                                                    <input id="e1" className="form-check-input" name="prices" type="radio"/>
-                                                    <label htmlFor="e1" className="form-check-label">Less Then $10,000</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="e2" className="form-check-input" name="prices" type="radio"/>
-                                                    <label htmlFor="e2" className="form-check-label">$10,000 - $15,000</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="e3" className="form-check-input" name="prices" type="radio"/>
-                                                    <label htmlFor="e3" className="form-check-label">$12,000 - $25,000</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="e4" className="form-check-input" name="prices" type="radio" defaultChecked/>
-                                                    <label htmlFor="e4" className="form-check-label">$30,000 - $35,000</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="e5" className="form-check-input" name="prices" type="radio"/>
-                                                    <label htmlFor="e5" className="form-check-label">$40,000 - $45,000</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="e6" className="form-check-input" name="prices" type="radio"/>
-                                                    <label htmlFor="e6" className="form-check-label">$50,000 - $55,000</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="e7" className="form-check-input" name="prices" type="radio"/>
-                                                    <label htmlFor="e7" className="form-check-label">$60,000 - $65,000</label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                      </div>
                     </div>
-                    
-                    
-                    {/* <div className="single_search_boxed">
+                  </div>
+                </div>
+              </div>
+
+              {/* <div className="single_search_boxed">
                         <div className="widget-boxed-header">
                             <h4>
                                 <Link to="#" onClick={()=>setOpen5(!open5)} className={open5 ? '' : 'collapsed'}>Mood<span className="selected">Any Mood</span></Link>
@@ -325,90 +596,184 @@ const SideFilter = ({show,  setShow}) => {
                             </div>
                         </div>
                     </div> */}
-                    
-                    
-                    <div className="single_search_boxed">
-                        <div className="widget-boxed-header">
-                            <h4>
-                                <Link to="#" onClick={()=>setOpen6(!open6)} className={open6 ? '' : 'collapsed'}>Ameneties<span className="selected">ADA Compliant</span></Link>
-                            </h4>
-                            
+
+              <div className="single_search_boxed">
+                <div className="widget-boxed-header">
+                  <h4>
+                    <Link
+                      to="#"
+                      onClick={() => setOpen6(!open6)}
+                      className={open6 ? "" : "collapsed"}
+                    >
+                      Ameneties<span className="selected">ADA Compliant</span>
+                    </Link>
+                  </h4>
+                </div>
+                <div
+                  className={`widget-boxed-body collapse ${
+                    open6 ? "show" : ""
+                  }`}
+                >
+                  <div className="side-list no-border">
+                    <div className="single_filter_card">
+                      <div className="card-body pt-0">
+                        <div className="inner_widget_link">
+                          <ul className="no-ul-list filter-list">
+                            <li className="form-check">
+                              <input
+                                id="g1"
+                                className="form-check-input"
+                                name="ADA"
+                                type="checkbox"
+                                defaultChecked
+                              />
+                              <label htmlFor="g1" className="form-check-label">
+                                ADA Compliant
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="g2"
+                                className="form-check-input"
+                                name="Parking"
+                                type="checkbox"
+                              />
+                              <label htmlFor="g2" className="form-check-label">
+                                Parking Options
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="g3"
+                                className="form-check-input"
+                                name="Coffee"
+                                type="checkbox"
+                              />
+                              <label htmlFor="g3" className="form-check-label">
+                                Coffee Provided
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="g4"
+                                className="form-check-input"
+                                name="Mother"
+                                type="checkbox"
+                              />
+                              <label htmlFor="g4" className="form-check-label">
+                                Mother's Room
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="g5"
+                                className="form-check-input"
+                                name="Outdoor"
+                                type="checkbox"
+                              />
+                              <label htmlFor="g5" className="form-check-label">
+                                Outdoor Space
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="g6"
+                                className="form-check-input"
+                                name="Pet"
+                                type="checkbox"
+                              />
+                              <label htmlFor="g6" className="form-check-label">
+                                Pet Friendly
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="g7"
+                                className="form-check-input"
+                                name="Beauty"
+                                type="checkbox"
+                              />
+                              <label htmlFor="g7" className="form-check-label">
+                                Beauty & Message
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="g8"
+                                className="form-check-input"
+                                name="Bike"
+                                type="checkbox"
+                              />
+                              <label htmlFor="g8" className="form-check-label">
+                                Bike Parking
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="g9"
+                                className="form-check-input"
+                                name="Phone"
+                                type="checkbox"
+                              />
+                              <label htmlFor="g9" className="form-check-label">
+                                Phone Line
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="g11"
+                                className="form-check-input"
+                                name="Private"
+                                type="checkbox"
+                              />
+                              <label htmlFor="g11" className="form-check-label">
+                                Private Areas
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="g12"
+                                className="form-check-input"
+                                name="Free"
+                                type="checkbox"
+                              />
+                              <label htmlFor="g12" className="form-check-label">
+                                Free WiFi
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                id="g13"
+                                className="form-check-input"
+                                name="Swiming"
+                                type="checkbox"
+                              />
+                              <label htmlFor="g13" className="form-check-label">
+                                Swiming Pool
+                              </label>
+                            </li>
+                          </ul>
                         </div>
-                        <div className={`widget-boxed-body collapse ${open6 ? 'show' : ''}`}>
-                            <div className="side-list no-border">
-                                
-                                <div className="single_filter_card">
-                                    <div className="card-body pt-0">
-                                        <div className="inner_widget_link">
-                                            <ul className="no-ul-list filter-list">
-                                                <li className="form-check">
-                                                    <input id="g1" className="form-check-input" name="ADA" type="checkbox" defaultChecked/>
-                                                    <label htmlFor="g1" className="form-check-label">ADA Compliant</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="g2" className="form-check-input" name="Parking" type="checkbox"/>
-                                                    <label htmlFor="g2" className="form-check-label">Parking Options</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="g3" className="form-check-input" name="Coffee" type="checkbox"/>
-                                                    <label htmlFor="g3" className="form-check-label">Coffee Provided</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="g4" className="form-check-input" name="Mother" type="checkbox"/>
-                                                    <label htmlFor="g4" className="form-check-label">Mother's Room</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="g5" className="form-check-input" name="Outdoor" type="checkbox"/>
-                                                    <label htmlFor="g5" className="form-check-label">Outdoor Space</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="g6" className="form-check-input" name="Pet" type="checkbox"/>
-                                                    <label htmlFor="g6" className="form-check-label">Pet Friendly</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="g7" className="form-check-input" name="Beauty" type="checkbox"/>
-                                                    <label htmlFor="g7" className="form-check-label">Beauty & Message</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="g8" className="form-check-input" name="Bike" type="checkbox"/>
-                                                    <label htmlFor="g8" className="form-check-label">Bike Parking</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="g9" className="form-check-input" name="Phone" type="checkbox"/>
-                                                    <label htmlFor="g9" className="form-check-label">Phone Line</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="g11" className="form-check-input" name="Private" type="checkbox"/>
-                                                    <label htmlFor="g11" className="form-check-label">Private Areas</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="g12" className="form-check-input" name="Free" type="checkbox"/>
-                                                    <label htmlFor="g12" className="form-check-label">Free WiFi</label>
-                                                </li>
-                                                <li className="form-check">
-                                                    <input id="g13" className="form-check-input" name="Swiming" type="checkbox"/>
-                                                    <label htmlFor="g13" className="form-check-label">Swiming Pool</label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                      </div>
                     </div>
-                    
+                  </div>
                 </div>
-                
-                <div className="form-group filter_button">
-                    <button type="submit" className="btn btn btn-primary rounded full-width">22 Results Show</button>
-                </div>
-            </div>							
+              </div>
+            </div>
+
+            <div className="form-group filter_button">
+              <button
+                type="submit"
+                className="btn btn btn-primary rounded full-width"
+              >
+                22 Results Show
+              </button>
+            </div>
+          </div>
         </div>
-    </div>
-    
-    
+      </div>
     </>
-  )
+  );
 }
 
 export default SideFilter

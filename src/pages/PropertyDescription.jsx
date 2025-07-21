@@ -102,11 +102,12 @@ const PropertyDescription = () => {
                       : "Jannat Graynight Mood In Siver Colony, London"}
                   </h3>
                   <span>
-                    <i className="lni-map-marker"></i> 778 Country St. Panama
-                    City, FL
+                    <i className="lni-map-marker"></i> 778 Country St. Doha,
+                    Qatar
                   </span>
+
                   <h3 className="prt-price-fix text-primary mt-2">
-                    $7,600<sub>/month</sub>
+                    QAR 7,600<sub>/month</sub>
                   </h3>
                   <div className="list-fx-features">
                     <div className="listing-card-info-icon">
