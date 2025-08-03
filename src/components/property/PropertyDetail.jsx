@@ -12,6 +12,7 @@ import edu from '../../assets/img/edu.png'
 import food from '../../assets/img/food.png'
 import { galleryImg, propertyFeature } from '../../data/Propery'
 import '../../../node_modules/react-modal-video/css/modal-video.css'
+import ProvidedByCards from './ProvidedByCards';
 
 // Custom Lightbox Component
 const CustomLightbox = ({ images, currentIndex, isOpen, onClose, onNext, onPrev }) => {
@@ -556,6 +557,8 @@ const PropertyDetail = () => {
             </div>
           </div>
         </div>
+
+        <ProvidedByCards/>
 
         <div className="rating-overview">
           <div className="rating-overview-box">

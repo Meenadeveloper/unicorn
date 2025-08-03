@@ -19,6 +19,8 @@ import Contact from './pages/Contact';
 import Blogs from './pages/Blogs';
 import BlogDetail from './pages/BlogDetail';
 import CreateAccount from './features/CreateAccount';
+import PropertyListWithFilter from './pages/PropertyListWithFilter';
+import AgentsPage from './pages/AgentsPage';
 
 
 function App() {
@@ -30,6 +32,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/property-list" element={<PropertyList />} />
+         <Route path="/property-list-filter" element={<PropertyListWithFilter />} />AgentsPage
+                 <Route path="/agents-list" element={<AgentsPage />} />
+
         <Route path="/property-detail/:id" element={<PropertyDescription />} />
         <Route path="user/my-profile" element={<MyProfile />} />
         <Route path="user/wishlist" element={<Wishlist />} />
