@@ -31,14 +31,14 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/property-list" element={<PropertyList />} />
-         <Route path="/property-list-filter" element={<PropertyListWithFilter />} />AgentsPage
+        <Route path="/property-list-filter" element={<PropertyList />} />
+         <Route path="/property-list" element={<PropertyListWithFilter />} />
                  <Route path="/agents-list" element={<AgentsPage />} />
 
         <Route path="/property-detail/:id" element={<PropertyDescription />} />
-        <Route path="user/my-profile" element={<MyProfile />} />
-        <Route path="user/wishlist" element={<Wishlist />} />
-        <Route path="user/change-password" element={<ChangePassword />} />
+        <Route path="/user/my-profile" element={<MyProfile />} />
+        <Route path="/user/wishlist" element={<Wishlist />} />
+        <Route path="/user/change-password" element={<ChangePassword />} />
         <Route path="/not-found" element={<ErrorPage />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />

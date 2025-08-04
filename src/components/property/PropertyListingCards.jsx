@@ -19,6 +19,8 @@ import BedIcon from '@mui/icons-material/Bed';
 import SquareFootIcon from '@mui/icons-material/SquareFoot';
 import BathtubIcon from '@mui/icons-material/Bathtub';
 import { Link } from "react-router-dom";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const PropertyListingCards = () => {
   const [favorites, setFavorites] = useState([]);
@@ -87,8 +89,11 @@ const PropertyListingCards = () => {
         <div className="row">
           <div className="col-lg-8">
             {properties.map((property) => (
-              <Link to={`/property-detail/${property.id}`} 
-               key={property.id} className="unicorn-property-card">
+              <Link
+                to={`/property-detail/${property.id}`}
+                key={property.id}
+                className="unicorn-property-card"
+              >
                 <div className="unicorn-property-card-top">
                   <div className="unicorn-image-container product-card-left">
                     <img
@@ -97,13 +102,10 @@ const PropertyListingCards = () => {
                       className="unicorn-property-image"
                     />
 
-                   
-
                     <div className="unicorn-badges">
                       {property.badges.includes("VERIFIED") && (
                         <div className="unicorn-badge verified">✓ VERIFIED</div>
                       )}
-                      
                     </div>
 
                     <div className="unicorn-action-buttons">
@@ -111,7 +113,9 @@ const PropertyListingCards = () => {
                         className="unicorn-icon-button"
                         title="Save to favorites"
                       >
-                          <LocationOnIcon style={{ color: '#f44336', fontSize: 18 }} />
+                        <LocationOnIcon
+                          style={{ color: "#f44336", fontSize: 18 }}
+                        />
                       </button>
                       <button
                         className={`unicorn-icon-button unicorn-favorite-btn ${
@@ -120,7 +124,11 @@ const PropertyListingCards = () => {
                         onClick={() => toggleFavorite(property.id)}
                         title="Add to favorites"
                       >
-                        {favorites.includes(property.id) ? "❤️" : "🤍"}
+                        {favorites.includes(property.id) ? (
+                          <FavoriteIcon style={{ color: "red" }} />
+                        ) : (
+                          <FavoriteBorderIcon />
+                        )}
                       </button>
                     </div>
                   </div>
@@ -146,52 +154,65 @@ const PropertyListingCards = () => {
                     <h3 className="unicorn-property-title">{property.title}</h3>
 
                     <div className="unicorn-property-location">
-                      <LocationOnIcon style={{ color: '#f44336', fontSize: 28 }} />
- {property.location}
+                      <LocationOnIcon
+                        style={{ color: "#f44336", fontSize: 28 }}
+                      />
+                      {property.location}
                     </div>
 
                     <div className="unicorn-property-features">
                       <div className="unicorn-feature-item">
-                     <BedIcon style={{ fontSize: 24 }} />
- {property.bedrooms}
+                        <BedIcon style={{ fontSize: 24 }} />
+                        {property.bedrooms}
                       </div>
                       <div className="unicorn-feature-item">
                         <BathtubIcon style={{ fontSize: 24 }} />
- {property.bathrooms}
+                        {property.bathrooms}
                       </div>
                       <div className="unicorn-feature-item">
                         <SquareFootIcon style={{ fontSize: 24 }} />
- {property.area}
+                        {property.area}
                       </div>
                     </div>
                   </div>
                 </div>
-<div className="unicorn-property-card-bottom">
-                <div className="unicorn-agent-section">
-                  <div className="unicorn-agent-info" style={{display:'flex', gap:"10px", flexDirection:"row", alignItems:"center" }}>
-                    <img
-                      src={property.agentImage}
-                      alt={property.agentName}
-                      className="unicorn-agent-avatar"
-                    />
-                    <div className="unicorn-agent-details" style={{marginBottom:"0px"}}>
-                      Listed {property.listedDate}
+                <div className="unicorn-property-card-bottom">
+                  <div className="unicorn-agent-section">
+                    <div
+                      className="unicorn-agent-info"
+                      style={{
+                        display: "flex",
+                        gap: "10px",
+                        flexDirection: "row",
+                        alignItems: "center",
+                      }}
+                    >
+                      <img
+                        src={property.agentImage}
+                        alt={property.agentName}
+                        className="unicorn-agent-avatar"
+                      />
+                      <div
+                        className="unicorn-agent-details"
+                        style={{ marginBottom: "0px" }}
+                      >
+                        Listed {property.listedDate}
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="unicorn-contact-buttons">
-                  <button className="unicorn-contact-btn unicorn-call-btn">
-                     <CallIcon /> Call
-                  </button>
-                  <button className="unicorn-contact-btn unicorn-email-btn">
-                     <EmailIcon style={{ marginRight: '8px' }} /> Email
-                  </button>
-                  <button className="unicorn-contact-btn unicorn-whatsapp-btn">
-                    <FaWhatsapp style={{ color: '#25D366', fontSize: 24 }} />
- WhatsApp
-                  </button>
-                  <button className="unicorn-more-btn">⋯</button>
-                </div>
+                  <div className="unicorn-contact-buttons">
+                    <button className="unicorn-contact-btn unicorn-call-btn">
+                      <CallIcon /> Call
+                    </button>
+                    <button className="unicorn-contact-btn unicorn-email-btn">
+                      <EmailIcon style={{ marginRight: "8px" }} /> Email
+                    </button>
+                    <button className="unicorn-contact-btn unicorn-whatsapp-btn">
+                      <FaWhatsapp style={{ color: "#25D366", fontSize: 24 }} />
+                      WhatsApp
+                    </button>
+                    <button className="unicorn-more-btn">⋯</button>
+                  </div>
                 </div>
               </Link>
             ))}

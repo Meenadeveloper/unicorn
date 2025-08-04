@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import AgentListDisplay from '../components/AgentListDisplay';
 import MyLocationIcon from '@mui/icons-material/MyLocation';
 import banner from "../assets/img/tour-1.jpg"
+import Navbar from '../components/navbar/Navbar';
 const AgentsPage = () => {
   const [activeTab, setActiveTab] = useState('agents');
   const [searchValue, setSearchValue] = useState('');
@@ -515,30 +516,38 @@ const AgentsPage = () => {
         }
       `}</style>
 
+      <Navbar transparent={false} />
       <div className="unicorn-agents-page">
         {/* Hero Section */}
-        <section className="unicorn-hero-section" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${banner})`,
-}}>
+        <section
+          className="unicorn-hero-section"
+          style={{
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${banner})`,
+          }}
+        >
           <div className="container">
             <h1 className="unicorn-hero-title">
-              {activeTab === 'agents' 
-                ? 'Find your agent to find a home'
-                : 'Find the best real estate companies'
-              }
+              {activeTab === "agents"
+                ? "Find your agent to find a home"
+                : "Find the best real estate companies"}
             </h1>
-            
+
             <div className="unicorn-search-container">
               {/* Tabs */}
               <div className="unicorn-tabs">
-                <button 
-                  className={`unicorn-tab ${activeTab === 'agents' ? 'active' : ''}`}
-                  onClick={() => setActiveTab('agents')}
+                <button
+                  className={`unicorn-tab ${
+                    activeTab === "agents" ? "active" : ""
+                  }`}
+                  onClick={() => setActiveTab("agents")}
                 >
                   Agents
                 </button>
-                <button 
-                  className={`unicorn-tab ${activeTab === 'companies' ? 'active' : ''}`}
-                  onClick={() => setActiveTab('companies')}
+                <button
+                  className={`unicorn-tab ${
+                    activeTab === "companies" ? "active" : ""
+                  }`}
+                  onClick={() => setActiveTab("companies")}
                 >
                   Companies
                 </button>
@@ -548,15 +557,16 @@ const AgentsPage = () => {
               <div className="unicorn-search-form">
                 {/* Search Input */}
                 <div className="unicorn-search-input-container">
-                  <div className="unicorn-search-icon"><MyLocationIcon style={{ color: 'gray', fontSize: 24 }} />
-</div>
+                  <div className="unicorn-search-icon">
+                    <MyLocationIcon style={{ color: "gray", fontSize: 24 }} />
+                  </div>
                   <input
                     type="text"
                     className="unicorn-search-input"
                     placeholder={
-                      activeTab === 'agents' 
-                        ? 'Enter location or agent name'
-                        : 'Enter location or company name'
+                      activeTab === "agents"
+                        ? "Enter location or agent name"
+                        : "Enter location or company name"
                     }
                     value={searchValue}
                     onChange={(e) => setSearchValue(e.target.value)}
@@ -565,21 +575,27 @@ const AgentsPage = () => {
 
                 {/* Service Dropdown */}
                 <div className="unicorn-dropdown">
-                  <button 
-                    className={`unicorn-dropdown-btn ${dropdownOpen === 'service' ? 'open' : ''}`}
-                    onClick={() => toggleDropdown('service')}
+                  <button
+                    className={`unicorn-dropdown-btn ${
+                      dropdownOpen === "service" ? "open" : ""
+                    }`}
+                    onClick={() => toggleDropdown("service")}
                   >
                     <span>{selectedService}</span>
                     <span className="unicorn-dropdown-arrow">▼</span>
                   </button>
-                  <div className={`unicorn-dropdown-menu ${dropdownOpen === 'service' ? 'show' : ''}`}>
+                  <div
+                    className={`unicorn-dropdown-menu ${
+                      dropdownOpen === "service" ? "show" : ""
+                    }`}
+                  >
                     {serviceOptions.map((option, index) => (
                       <div
                         key={index}
                         className="unicorn-dropdown-item"
                         onClick={() => {
                           setSelectedService(option);
-                          setDropdownOpen('');
+                          setDropdownOpen("");
                         }}
                       >
                         {option}
@@ -589,23 +605,29 @@ const AgentsPage = () => {
                 </div>
 
                 {/* Language Dropdown - Only for agents */}
-                {activeTab === 'agents' && (
+                {activeTab === "agents" && (
                   <div className="unicorn-dropdown">
-                    <button 
-                      className={`unicorn-dropdown-btn ${dropdownOpen === 'language' ? 'open' : ''}`}
-                      onClick={() => toggleDropdown('language')}
+                    <button
+                      className={`unicorn-dropdown-btn ${
+                        dropdownOpen === "language" ? "open" : ""
+                      }`}
+                      onClick={() => toggleDropdown("language")}
                     >
                       <span>{selectedLanguage}</span>
                       <span className="unicorn-dropdown-arrow">▼</span>
                     </button>
-                    <div className={`unicorn-dropdown-menu ${dropdownOpen === 'language' ? 'show' : ''}`}>
+                    <div
+                      className={`unicorn-dropdown-menu ${
+                        dropdownOpen === "language" ? "show" : ""
+                      }`}
+                    >
                       {languageOptions.map((option, index) => (
                         <div
                           key={index}
                           className="unicorn-dropdown-item"
                           onClick={() => {
                             setSelectedLanguage(option);
-                            setDropdownOpen('');
+                            setDropdownOpen("");
                           }}
                         >
                           {option}
@@ -616,23 +638,29 @@ const AgentsPage = () => {
                 )}
 
                 {/* Nationality Dropdown - Only for agents */}
-                {activeTab === 'agents' && (
+                {activeTab === "agents" && (
                   <div className="unicorn-dropdown">
-                    <button 
-                      className={`unicorn-dropdown-btn ${dropdownOpen === 'nationality' ? 'open' : ''}`}
-                      onClick={() => toggleDropdown('nationality')}
+                    <button
+                      className={`unicorn-dropdown-btn ${
+                        dropdownOpen === "nationality" ? "open" : ""
+                      }`}
+                      onClick={() => toggleDropdown("nationality")}
                     >
                       <span>{selectedNationality}</span>
                       <span className="unicorn-dropdown-arrow">▼</span>
                     </button>
-                    <div className={`unicorn-dropdown-menu ${dropdownOpen === 'nationality' ? 'show' : ''}`}>
+                    <div
+                      className={`unicorn-dropdown-menu ${
+                        dropdownOpen === "nationality" ? "show" : ""
+                      }`}
+                    >
                       {nationalityOptions.map((option, index) => (
                         <div
                           key={index}
                           className="unicorn-dropdown-item"
                           onClick={() => {
                             setSelectedNationality(option);
-                            setDropdownOpen('');
+                            setDropdownOpen("");
                           }}
                         >
                           {option}
@@ -644,7 +672,7 @@ const AgentsPage = () => {
 
                 {/* Search Button */}
                 <button className="unicorn-search-btn" onClick={handleSearch}>
-                   Search
+                  Search
                 </button>
               </div>
             </div>
@@ -655,21 +683,20 @@ const AgentsPage = () => {
         <section className="unicorn-results-section">
           <div className="container">
             <h2 className="mb-4">
-              {activeTab === 'agents' ? 'Top Real Estate Agents' : 'Top Real Estate Companies'}
+              {activeTab === "agents"
+                ? "Top Real Estate Agents"
+                : "Top Real Estate Companies"}
             </h2>
             <p className="text-muted mb-0">
-              Find the best {activeTab} in your area with verified reviews and ratings
+              Find the best {activeTab} in your area with verified reviews and
+              ratings
             </p>
 
             {/* Companies Grid */}
-            {activeTab === 'companies' && (
-             <AgentListDisplay/>
-            )}
+            {activeTab === "companies" && <AgentListDisplay />}
 
             {/* Agents Results Placeholder */}
-            {activeTab === 'agents' && (
-              <AgentListDisplay/>
-            )}
+            {activeTab === "agents" && <AgentListDisplay />}
           </div>
         </section>
       </div>

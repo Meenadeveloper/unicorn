@@ -6,8 +6,9 @@ import { FiChevronDown } from "react-icons/fi";
 import { TiSocialGooglePlus, TiSocialFacebook } from "react-icons/ti";
 import { navbarData } from "../../data/menuData";
 import user from "../../assets/img/team-1.jpg";
-
+import { useNavigate } from "react-router-dom";
 const Navbar = ({ transparent = false }) => {
+  const navigate = useNavigate();
   const [activeMenu, setActiveMenu] = useState({});
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [toggle, setIsToggle] = useState(false);
@@ -141,7 +142,7 @@ const isUserRoute = location.pathname.startsWith("/user/");
     return navbarData.socialMenu.map((item) => (
       <li key={item.id} className={item.wrapperClass || ""}>
         <Link
-          to={item.path || "#"}
+          to={item.path || ""}
           className={item.className}
           onClick={() => {
             if (item.action === "login") setLogin(!login);
@@ -241,6 +242,11 @@ const isUserRoute = location.pathname.startsWith("/user/");
       window.removeEventListener("resize", handleResize);
     };
   }, [windowWidth]);
+
+   const handleLoginClick = () => {
+     navigate("/user/my-profile");
+   };
+
 
   return (
     <>
@@ -482,6 +488,7 @@ const isUserRoute = location.pathname.startsWith("/user/");
                       <button
                         type="button"
                         className="btn btn-lg btn-primary fw-medium full-width rounded-2"
+                        onClick={handleLoginClick}
                       >
                         LogIn
                       </button>
@@ -531,7 +538,7 @@ const isUserRoute = location.pathname.startsWith("/user/");
       <div className={`offcanvas offcanvas-end ${property ? "show" : ""}`}>
         <div className="offcanvas-header">
           <h5 className="offcanvas-title" id="offcanvasScrollingLabel">
-           Wishlist Property
+            Wishlist Property
           </h5>
           <Link to="#" onClick={() => setProperty(!property)}>
             <span className="svg-icon text-primary svg-icon-2hx">
@@ -609,7 +616,7 @@ const isUserRoute = location.pathname.startsWith("/user/");
                     to="/"
                     className="btn btn-light-primary fw-medium full-width"
                   >
-                    View 
+                    View
                   </Link>
                 </div>
               </div>
@@ -626,7 +633,7 @@ const isUserRoute = location.pathname.startsWith("/user/");
                     to="#"
                     className="btn btn-light-primary fw-medium full-width"
                   >
-                    View 
+                    View
                   </Link>
                 </div>
               </div>

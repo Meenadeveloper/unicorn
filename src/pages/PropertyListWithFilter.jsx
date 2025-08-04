@@ -2,7 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import Navbar from '../components/navbar/Navbar';
 import PropertyListingCards from '../components/property/PropertyListingCards';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-
+import BathtubIcon from '@mui/icons-material/Bathtub';
+import SquareFootIcon from '@mui/icons-material/SquareFoot';
+import DiamondIcon from '@mui/icons-material/Diamond'; // or CategoryIcon
 
 const PropertyListWithFilter = () => {
 
@@ -128,8 +130,7 @@ const PropertyListWithFilter = () => {
 
   return (
     <>
-  
-      <Navbar transparent={false}/>   
+      <Navbar transparent={false} />
       {/* Sticky Filters */}
       <div className="unicorn-sticky-filters">
         <div className="container">
@@ -143,9 +144,13 @@ const PropertyListWithFilter = () => {
                   placeholder="City, community or building"
                   value={searchValue}
                   onChange={(e) => setSearchValue(e.target.value)}
-                  onFocus={() => toggleDropdown('search')}
+                  onFocus={() => toggleDropdown("search")}
                 />
-                <div className={`unicorn-dropdown-menu unicorn-popular-locations ${activeDropdown === 'search' ? 'show' : ''}`}>
+                <div
+                  className={`unicorn-dropdown-menu unicorn-popular-locations ${
+                    activeDropdown === "search" ? "show" : ""
+                  }`}
+                >
                   <h6>Popular locations</h6>
                   {popularLocations.map((location, index) => (
                     <div
@@ -153,11 +158,16 @@ const PropertyListWithFilter = () => {
                       className="unicorn-location-item"
                       onClick={() => handleLocationSelect(location)}
                     >
-                      <div className="unicorn-location-icon"><LocationOnIcon style={{ color: '#ff3d00', fontSize: 30 }} />
-</div>
+                      <div className="unicorn-location-icon" style={{background:"transparent"}}>
+                        <LocationOnIcon
+                          style={{ color: "#ff3d00", fontSize: 20 }}
+                        />
+                      </div>
                       <div>
                         <div style={{ fontWeight: 500 }}>{location.name}</div>
-                        <div style={{ fontSize: '12px', color: '#666' }}>{location.city}</div>
+                        <div style={{ fontSize: "12px", color: "#666" }}>
+                          {location.city}
+                        </div>
                       </div>
                     </div>
                   ))}
@@ -169,20 +179,27 @@ const PropertyListWithFilter = () => {
             <div className="col-6 col-lg-auto">
               <div className="position-relative">
                 <button
-                  className={`unicorn-filter-btn ${activeDropdown === 'rent' ? 'open' : ''}`}
-                  onClick={() => toggleDropdown('rent')}
+                  className={`unicorn-filter-btn ${
+                    activeDropdown === "rent" ? "open" : ""
+                  }`}
+                  onClick={() => toggleDropdown("rent")}
                 >
                   <span>{selectedRent}</span>
                   <span className="unicorn-dropdown-arrow">▼</span>
                 </button>
-                <div className={`unicorn-dropdown-menu ${activeDropdown === 'rent' ? 'show' : ''}`}>
+                <div
+                  className={`unicorn-dropdown-menu ${
+                    activeDropdown === "rent" ? "show" : ""
+                  }`}
+                  style={{ width: "250px" }}
+                >
                   {rentOptions.map((option, index) => (
                     <div
                       key={index}
                       className="unicorn-dropdown-item"
                       onClick={() => {
                         setSelectedRent(option);
-                        setActiveDropdown('');
+                        setActiveDropdown("");
                       }}
                     >
                       {option}
@@ -196,20 +213,27 @@ const PropertyListWithFilter = () => {
             <div className="col-6 col-lg-auto">
               <div className="position-relative">
                 <button
-                  className={`unicorn-filter-btn ${activeDropdown === 'propertyType' ? 'open' : ''}`}
-                  onClick={() => toggleDropdown('propertyType')}
+                  className={`unicorn-filter-btn ${
+                    activeDropdown === "propertyType" ? "open" : ""
+                  }`}
+                  onClick={() => toggleDropdown("propertyType")}
                 >
                   <span>{selectedPropertyType}</span>
                   <span className="unicorn-dropdown-arrow">▼</span>
                 </button>
-                <div className={`unicorn-dropdown-menu ${activeDropdown === 'propertyType' ? 'show' : ''}`}>
+                <div
+                  className={`unicorn-dropdown-menu ${
+                    activeDropdown === "propertyType" ? "show" : ""
+                  }`}
+                  style={{ width: "250px" }}
+                >
                   {propertyTypes.map((type, index) => (
                     <div
                       key={index}
                       className="unicorn-dropdown-item"
                       onClick={() => {
                         setSelectedPropertyType(type);
-                        setActiveDropdown('');
+                        setActiveDropdown("");
                       }}
                     >
                       {type}
@@ -223,20 +247,36 @@ const PropertyListWithFilter = () => {
             <div className="col-6 col-lg-auto">
               <div className="position-relative">
                 <button
-                  className={`unicorn-filter-btn ${activeDropdown === 'beds' ? 'open' : ''}`}
-                  onClick={() => toggleDropdown('beds')}
+                  className={`unicorn-filter-btn ${
+                    activeDropdown === "beds" ? "open" : ""
+                  }`}
+                  onClick={() => toggleDropdown("beds")}
                 >
                   <span>{selectedBeds}</span>
                   <span className="unicorn-dropdown-arrow">▼</span>
                 </button>
-                <div className={`unicorn-dropdown-menu ${activeDropdown === 'beds' ? 'show' : ''}`} style={{ width: '300px' }}>
-                  <div style={{ padding: '15px 20px', borderBottom: '1px solid #f0f0f0' }}>
-                    <h6 style={{ marginBottom: '10px', fontSize: '14px' }}>Bedrooms</h6>
+                <div
+                  className={`unicorn-dropdown-menu ${
+                    activeDropdown === "beds" ? "show" : ""
+                  }`}
+                  style={{ width: "360px" }}
+                >
+                  <div
+                    style={{
+                      padding: "15px 20px",
+                      borderBottom: "1px solid #f0f0f0",
+                    }}
+                  >
+                    <h6 style={{ marginBottom: "10px", fontSize: "14px" }}>
+                      Bedrooms
+                    </h6>
                     <div className="unicorn-bedroom-grid">
                       {bedroomOptions.map((bedroom, index) => (
                         <div
                           key={index}
-                          className={`unicorn-bedroom-btn ${selectedBedrooms.includes(bedroom) ? 'selected' : ''}`}
+                          className={`unicorn-bedroom-btn ${
+                            selectedBedrooms.includes(bedroom) ? "selected" : ""
+                          }`}
                           onClick={() => handleBedroomSelect(bedroom)}
                         >
                           {bedroom}
@@ -244,13 +284,19 @@ const PropertyListWithFilter = () => {
                       ))}
                     </div>
                   </div>
-                  <div style={{ padding: '15px 20px' }}>
-                    <h6 style={{ marginBottom: '10px', fontSize: '14px' }}>Bathrooms</h6>
+                  <div style={{ padding: "15px 20px" }}>
+                    <h6 style={{ marginBottom: "10px", fontSize: "14px" }}>
+                      Bathrooms
+                    </h6>
                     <div className="unicorn-bedroom-grid">
                       {bathroomOptions.map((bathroom, index) => (
                         <div
                           key={index}
-                          className={`unicorn-bedroom-btn ${selectedBathrooms.includes(bathroom) ? 'selected' : ''}`}
+                          className={`unicorn-bedroom-btn ${
+                            selectedBathrooms.includes(bathroom)
+                              ? "selected"
+                              : ""
+                          }`}
                           onClick={() => handleBathroomSelect(bathroom)}
                         >
                           {bathroom}
@@ -266,13 +312,20 @@ const PropertyListWithFilter = () => {
             <div className="col-6 col-lg-auto">
               <div className="position-relative">
                 <button
-                  className={`unicorn-filter-btn ${activeDropdown === 'price' ? 'open' : ''}`}
-                  onClick={() => toggleDropdown('price')}
+                  className={`unicorn-filter-btn ${
+                    activeDropdown === "price" ? "open" : ""
+                  }`}
+                  onClick={() => toggleDropdown("price")}
                 >
                   <span>{selectedPrice}</span>
                   <span className="unicorn-dropdown-arrow">▼</span>
                 </button>
-                <div className={`unicorn-dropdown-menu ${activeDropdown === 'price' ? 'show' : ''}`} style={{ width: '280px' }}>
+                <div
+                  className={`unicorn-dropdown-menu ${
+                    activeDropdown === "price" ? "show" : ""
+                  }`}
+                  style={{ width: "320px" }}
+                >
                   <div className="unicorn-price-section">
                     <div className="unicorn-price-inputs">
                       <input
@@ -281,6 +334,7 @@ const PropertyListWithFilter = () => {
                         placeholder="Min. Price (AED)"
                         value={minPrice}
                         onChange={(e) => setMinPrice(e.target.value)}
+                        style={{ width: "100px" }}
                       />
                       <span>—</span>
                       <input
@@ -289,14 +343,19 @@ const PropertyListWithFilter = () => {
                         placeholder="Max. Price (AED)"
                         value={maxPrice}
                         onChange={(e) => setMaxPrice(e.target.value)}
+                        style={{ width: "100px" }}
                       />
                     </div>
-                    <h6 style={{ marginBottom: '10px', fontSize: '14px' }}>Rental Period</h6>
+                    <h6 style={{ marginBottom: "10px", fontSize: "14px" }}>
+                      Rental Period
+                    </h6>
                     <div className="unicorn-rental-period">
                       {periods.map((period, index) => (
                         <div
                           key={index}
-                          className={`unicorn-period-btn ${selectedPeriod === period ? 'selected' : ''}`}
+                          className={`unicorn-period-btn ${
+                            selectedPeriod === period ? "selected" : ""
+                          }`}
                           onClick={() => setSelectedPeriod(period)}
                         >
                           {period}
@@ -345,12 +404,17 @@ const PropertyListWithFilter = () => {
             <div className="unicorn-modal-body">
               {/* Furnishing */}
               <div className="unicorn-filter-section">
-                <h6>🛋️ Furnishing</h6>
+                <h6>
+                  {" "}
+                  <BathtubIcon /> Furnishing
+                </h6>
                 <div className="unicorn-rental-period">
                   {furnishingOptions.map((option, index) => (
                     <div
                       key={index}
-                      className={`unicorn-period-btn ${selectedFurnishing === option ? 'selected' : ''}`}
+                      className={`unicorn-period-btn ${
+                        selectedFurnishing === option ? "selected" : ""
+                      }`}
                       onClick={() => setSelectedFurnishing(option)}
                     >
                       {option}
@@ -361,7 +425,9 @@ const PropertyListWithFilter = () => {
 
               {/* Property Size */}
               <div className="unicorn-filter-section">
-                <h6>📐 Property Size (Sqft)</h6>
+                <h6>
+                  <SquareFootIcon /> Property Size (Sqft)
+                </h6>
                 <div className="unicorn-price-inputs">
                   <input
                     type="text"
@@ -383,7 +449,11 @@ const PropertyListWithFilter = () => {
 
               {/* Amenities */}
               <div className="unicorn-filter-section">
-                <h6>💎 Amenities</h6>
+                <h6>
+                  {" "}
+                  <DiamondIcon style={{ color: "purple" }} />
+                  Amenities
+                </h6>
                 <div className="unicorn-amenity-grid">
                   {amenities.map((amenity, index) => (
                     <div
@@ -391,8 +461,12 @@ const PropertyListWithFilter = () => {
                       className="unicorn-amenity-item"
                       onClick={() => handleAmenityToggle(amenity)}
                     >
-                      <div className={`unicorn-checkbox ${selectedAmenities.includes(amenity) ? 'checked' : ''}`}>
-                        {selectedAmenities.includes(amenity) && '✓'}
+                      <div
+                        className={`unicorn-checkbox ${
+                          selectedAmenities.includes(amenity) ? "checked" : ""
+                        }`}
+                      >
+                        {selectedAmenities.includes(amenity) && "✓"}
                       </div>
                       <span>{amenity}</span>
                     </div>
@@ -416,24 +490,22 @@ const PropertyListWithFilter = () => {
 
       {/* Main Content */}
       <div className="container unicorn-content">
-       
-
         {/* Results Header */}
         <div className="unicorn-results-header">
           <div>
-            <h2>Properties for rent in UAE</h2>
+            <h2>Properties</h2>
             <p className="text-muted">127,493 properties</p>
           </div>
-         
         </div>
-
-        
 
         {/* Sort Options */}
         <div className="d-flex justify-content-end mb-4">
           <div className="d-flex align-items-center gap-2">
-            <span style={{ fontSize: '14px', color: '#666' }}>Sort by:</span>
-            <select className="form-select" style={{ width: 'auto', fontSize: '14px' }}>
+            <span style={{ fontSize: "14px", color: "#666" }}>Sort by:</span>
+            <select
+              className="form-select"
+              style={{ width: "auto", fontSize: "14px" }}
+            >
               <option>Featured</option>
               <option>Price (Low to High)</option>
               <option>Price (High to Low)</option>
@@ -444,18 +516,11 @@ const PropertyListWithFilter = () => {
         </div>
 
         {/* Property Listings Grid */}
-      
 
-
-    <PropertyListingCards/>
-
-       
-
-       
+        <PropertyListingCards />
       </div>
-    
     </>
-  )
+  );
 }
 
 export default PropertyListWithFilter

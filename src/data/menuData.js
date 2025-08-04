@@ -84,6 +84,13 @@ export const navbarData = {
       // path: "/blogs",
       path: "#",
     },
+    {
+      id: 6,
+      title: "Agents",
+      slug: "agents",
+      // path: "/blogs",
+      path: "/agents-list",
+    },
   ],
 
   // mainMenu: [

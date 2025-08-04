@@ -54,7 +54,7 @@ const UserSidebar = ({show, setShow}) => {
                   </Link>
                 </li>
                 <li className={current === "#" ? "active" : ""}>
-                  <Link to="#">
+                  <Link to="/">
                     <i className="fa-solid fa-power-off"></i>Log Out
                   </Link>
                 </li>

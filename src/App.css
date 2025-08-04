@@ -559,13 +559,13 @@
         }
 
         .unicorn-period-btn:hover {
-          border-color: #6366f1;
+          border-color: #ab9471;
           background: #f8f9fa;
         }
 
         .unicorn-period-btn.selected {
-          border-color: #6366f1;
-          background: #6366f1;
+          border-color: #ab9471;
+          background: #ab9471;
           color: white;
         }
 
@@ -668,19 +668,19 @@
         }
 
         .unicorn-checkbox.checked {
-          background: #6366f1;
-          border-color: #6366f1;
+          background: #ab9471;
+          border-color: #ab9471;
           color: white;
         }
 
         .unicorn-results-btn {
-          background: #ef4444;
+          background: #ab9471;
           color: white;
           border: none;
           border-radius: 25px;
           padding: 15px 30px;
           font-weight: 600;
-          width: 100%;
+          width: fit-content;
           cursor: pointer;
           margin-top: 20px;
         }
@@ -718,8 +718,8 @@
         }
 
         .unicorn-view-btn.active {
-          border-color: #6366f1;
-          background: #6366f1;
+          border-color: #ab9471;
+          background: #ab9471;
           color: white;
         }
 
@@ -873,7 +873,7 @@
         }
 
         .unicorn-badge.superagent {
-          background: #8b5cf6;
+          background: #ab9471;
           color: white;
         }
 
