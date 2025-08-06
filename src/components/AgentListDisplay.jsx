@@ -105,9 +105,9 @@ const AgentListDisplay = () => {
                       <h3 className="unicorn-agent-name">{agent.name}</h3>
                       <div className="unicorn-agent-title">{agent.title}</div>
                     </div>
-                    <div className="unicorn-company-logo ">
+                    {/* <div className="unicorn-company-logo ">
                       <img src={agent.companyLogo} style={{objectFit:"cover", width:"100%", height:"100%"}} />
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="unicorn-superagent-rating">
