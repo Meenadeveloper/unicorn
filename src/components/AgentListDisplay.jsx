@@ -11,8 +11,10 @@ import companylogo from '../assets/img/companylogo.webp';
 import StarIcon from '@mui/icons-material/Star'; // Filled star
 import StarHalfIcon from '@mui/icons-material/StarHalf'; // Half-filled star
 import Rating from '@mui/material/Rating';
+import { useNavigate } from 'react-router-dom';
 
 const AgentListDisplay = () => {
+  const navigate = useNavigate();
   const [favoriteAgents, setFavoriteAgents] = useState([]);
 
   const toggleFavorite = (agentId) => {
@@ -23,6 +25,10 @@ const AgentListDisplay = () => {
     }
   };
 
+
+  const handlecard = () => {
+    navigate("/agents-details");
+  }
   const agents = [
     {
       id: 1,
@@ -85,7 +91,7 @@ const AgentListDisplay = () => {
       <div className="unicorn-agents-container">
         <div className="unicorn-agents-grid ">
           {agents.map((agent) => (
-            <div key={agent.id} className="unicorn-agent-card">
+            <div key={agent.id} className="unicorn-agent-card" onClick={handlecard} style={{cursor:"pointer"}}>
               <div className="unicorn-agent-image-container" style={{overflow:"hidden"}}>
                 <div className="unicorn-agent-image" >
                  <img src={agent.image}  style={{width:"100%" , height:"100%", objectFit:"cover"}}/>
