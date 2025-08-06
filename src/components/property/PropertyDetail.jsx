@@ -256,10 +256,22 @@ const PropertyDetail = () => {
             <div className="block-body">
               <ul className="deatil_features">
                 {propertyFeature.map((item, index) => {
+                  const IconComponent = item.icon; // Use as a component
                   return (
-                    <li key={index}>
-                      <strong>{item.title}</strong>
-                      {item.value}
+                    <li
+                      key={index}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        marginBottom: "10px",
+                      }}
+                    >
+                      <span style={{ marginRight: "10px", color: "#ab9471" }}>
+                        <IconComponent />
+                      </span>
+                      <span>
+                        <strong>{item.title}</strong> {item.value}
+                      </span>
                     </li>
                   );
                 })}
@@ -558,7 +570,7 @@ const PropertyDetail = () => {
           </div>
         </div>
 
-        <ProvidedByCards/>
+        <ProvidedByCards />
 
         <div className="rating-overview">
           <div className="rating-overview-box">

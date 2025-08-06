@@ -21,6 +21,7 @@ import BlogDetail from './pages/BlogDetail';
 import CreateAccount from './features/CreateAccount';
 import PropertyListWithFilter from './pages/PropertyListWithFilter';
 import AgentsPage from './pages/AgentsPage';
+import AgentDetailsPage from './pages/AgentDetailsPage';
 
 
 function App() {
@@ -32,8 +33,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/property-list-filter" element={<PropertyList />} />
-         <Route path="/property-list" element={<PropertyListWithFilter />} />
-                 <Route path="/agents-list" element={<AgentsPage />} />
+        <Route path="/property-list" element={<PropertyListWithFilter />} />
+        <Route path="/agents-list" element={<AgentsPage />} />
+        <Route path="/agents-details" element={<AgentDetailsPage />} />
 
         <Route path="/property-detail/:id" element={<PropertyDescription />} />
         <Route path="/user/my-profile" element={<MyProfile />} />

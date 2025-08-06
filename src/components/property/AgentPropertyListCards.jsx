@@ -1,28 +1,28 @@
 import React, { useState } from "react";
-import property1 from '../../assets/img/ct-1.png';
-import property2 from '../../assets/img/ct-2.png';
-import property3 from '../../assets/img/ct-3.png';
-import property4 from '../../assets/img/ct-4.png';
-import property5 from '../../assets/img/ct-5.png';
-import property6 from '../../assets/img/ct-6.png';
-import property7 from '../../assets/img/ct-7.png';
-import team1 from '../../assets/img/user-1.jpg';
-import team2 from '../../assets/img/user-2.jpg';
-import team3 from '../../assets/img/user-3.jpg';
-import team4 from '../../assets/img/user-4.jpg';
+import property1 from "../../assets/img/ct-1.png";
+import property2 from "../../assets/img/ct-2.png";
+import property3 from "../../assets/img/ct-3.png";
+import property4 from "../../assets/img/ct-4.png";
+import property5 from "../../assets/img/ct-5.png";
+import property6 from "../../assets/img/ct-6.png";
+import property7 from "../../assets/img/ct-7.png";
+import team1 from "../../assets/img/user-1.jpg";
+import team2 from "../../assets/img/user-2.jpg";
+import team3 from "../../assets/img/user-3.jpg";
+import team4 from "../../assets/img/user-4.jpg";
 
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import CallIcon from '@mui/icons-material/Call';
-import EmailIcon from '@mui/icons-material/Email';
-import { FaWhatsapp } from 'react-icons/fa';
-import BedIcon from '@mui/icons-material/Bed';
-import SquareFootIcon from '@mui/icons-material/SquareFoot';
-import BathtubIcon from '@mui/icons-material/Bathtub';
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import CallIcon from "@mui/icons-material/Call";
+import EmailIcon from "@mui/icons-material/Email";
+import { FaWhatsapp } from "react-icons/fa";
+import BedIcon from "@mui/icons-material/Bed";
+import SquareFootIcon from "@mui/icons-material/SquareFoot";
+import BathtubIcon from "@mui/icons-material/Bathtub";
 import { Link } from "react-router-dom";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
-const PropertyListingCards = () => {
+const AgentPropertyListCards = () => {
   const [favorites, setFavorites] = useState([]);
 
   const toggleFavorite = (propertyId) => {
@@ -252,6 +252,40 @@ const PropertyListingCards = () => {
                         </div>
                       </div>
                     </div>
+                    {/* <div className="unicorn-contact-buttons">
+                      <button
+                        className="unicorn-contact-btn unicorn-call-btn"
+                        style={{ backgroundColor: "#007bff", color: "#fff" }} // Blue for Call
+                      >
+                        <CallIcon style={{ marginRight: "8px" }} />
+                        Call
+                      </button>
+
+                      <button
+                        className="unicorn-contact-btn unicorn-email-btn"
+                        style={{ backgroundColor: "#dc3545", color: "#fff" , border:"none"}} // Red for Email
+                      >
+                        <EmailIcon style={{ marginRight: "8px" }} />
+                        Email
+                      </button>
+
+                      <button
+                        className="unicorn-contact-btn unicorn-whatsapp-btn"
+                        style={{ backgroundColor: "#25D366", color: "#fff" }} // WhatsApp green
+                      >
+                        <FaWhatsapp
+                          style={{ fontSize: 24, marginRight: "8px" }}
+                        />
+                        WhatsApp
+                      </button>
+
+                      <button
+                        className="unicorn-more-btn"
+                        style={{ backgroundColor: "#6c757d", color: "#fff" }} // Gray for More
+                      >
+                        ⋯
+                      </button>
+                    </div> */}
                     <div className="unicorn-contact-buttons">
                       {/* 📞 Call Button */}
                       <a
@@ -268,11 +302,7 @@ const PropertyListingCards = () => {
                       <a
                         href={`mailto:${property.email || "info@example.com"}`}
                         className="unicorn-contact-btn unicorn-email-btn"
-                        style={{
-                          backgroundColor: "#dc3545",
-                          color: "#fff",
-                          border: "none",
-                        }}
+                        style={{ backgroundColor: "#dc3545", color: "#fff", border:"none" }}
                         onClick={(e) => e.stopPropagation()}
                       >
                         <EmailIcon style={{ marginRight: "8px" }} />
@@ -330,14 +360,18 @@ const PropertyListingCards = () => {
             className="col-lg-4 side_stiky "
             style={{ height: "fit-content" }}
           >
-            <div className="unicorn-popular-searches">
+            {/* <div className="unicorn-popular-searches">
               <h4>Popular Searches</h4>
               {popularSearches.map((search, index) => (
                 <a key={index} href="#" className="unicorn-search-link">
                   {search}
                 </a>
               ))}
-            </div>
+            </div> */}
+            <img
+              src={property1}
+              style={{ width: "100%", height: "80vh", borderRadius: "10px" }}
+            />
           </div>
         </div>
       </div>
@@ -345,4 +379,4 @@ const PropertyListingCards = () => {
   );
 };
 
-export default PropertyListingCards;
+export default AgentPropertyListCards;

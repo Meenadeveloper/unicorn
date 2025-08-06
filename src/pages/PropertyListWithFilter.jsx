@@ -24,8 +24,31 @@ const PropertyListWithFilter = () => {
   const [selectedFurnishing, setSelectedFurnishing] = useState('All furnishings');
   const [minArea, setMinArea] = useState('');
   const [maxArea, setMaxArea] = useState('');
+    const [showAll, setShowAll] = useState(false);
 
   const dropdownRef = useRef(null);
+
+  const propertyCategory = [
+    { name: "Apartments", count: 137808 },
+    { name: "Villas", count: 51339 },
+    { name: "Townhouses", count: 17654 },
+    { name: "Land", count: 6730 },
+    { name: "Penthouses", count: 1262 },
+    { name: "Duplexes", count: 1258 },
+    { name: "Whole Buildings", count: 633 },
+    { name: "Hotel Apartments", count: 505 },
+    { name: "Compounds", count: 175 },
+    { name: "Bulk Sale Units", count: 52 },
+    { name: "Full Floors", count: 38 },
+    { name: "Bungalows", count: 17 },
+    { name: "Half Floors", count: 9 },
+  ];
+
+  const visibleItems = showAll
+    ? propertyCategory
+    : propertyCategory.slice(0, 8);
+
+ 
 
   const popularLocations = [
     { name: 'Dubai Marina', city: 'Dubai' },
@@ -158,7 +181,10 @@ const PropertyListWithFilter = () => {
                       className="unicorn-location-item"
                       onClick={() => handleLocationSelect(location)}
                     >
-                      <div className="unicorn-location-icon" style={{background:"transparent"}}>
+                      <div
+                        className="unicorn-location-icon"
+                        style={{ background: "transparent" }}
+                      >
                         <LocationOnIcon
                           style={{ color: "#ff3d00", fontSize: 20 }}
                         />
@@ -496,6 +522,122 @@ const PropertyListWithFilter = () => {
             <h2>Properties</h2>
             <p className="text-muted">127,493 properties</p>
           </div>
+        </div>
+
+        <div
+          className="container-fluid py-3"
+          style={{
+            background: "#f2f2f2",
+            marginBottom: "20px",
+            borderRadius: "10px",
+          }}
+        >
+          <div className="row g-2">
+            {visibleItems.map((property, index) => (
+              <div key={index} className="col-6 col-md-4 col-lg-3">
+                <div className="property-item d-flex align-items-center p-2 rounded">
+                  <span
+                    className="text-primary fw-normal me-1"
+                    style={{ fontSize: "14px" }}
+                  >
+                    {property.name}
+                  </span>
+                  <span className="text-muted" style={{ fontSize: "14px" }}>
+                    {property.count}
+                  </span>
+                </div>
+              </div>
+            ))}
+
+            {/* Show More/Less Button */}
+            <div className="col-12 d-flex justify-content-end mt-2">
+              <button
+                className="btn d-flex align-items-center text-decoration-none"
+                onClick={() => setShowAll(!showAll)}
+                style={{
+                  fontSize: "14px",
+                  background: "#ab9471",
+                  padding: "15px !important",
+                  color: "#000000 !important",
+                  height: "fit-content",
+                }}
+              >
+                <span className="me-2">
+                  {showAll ? "Show less" : "Show more"}
+                </span>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  style={{
+                    transform: showAll ? "rotate(180deg)" : "rotate(0deg)",
+                    transition: "transform 0.2s ease",
+                  }}
+                >
+                  <polyline points="6,9 12,15 18,9"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          {/* Bootstrap CSS CDN */}
+       
+
+          <style jsx>{`
+            .btn-link:hover {
+              color: #0c0c0cff !important;
+            }
+
+            .text-primary {
+              color: #6c757d !important;
+            }
+
+            .property-item {
+              transition: all 0.2s ease;
+              cursor: pointer;
+              margin: 2px;
+              border: 1px solid transparent;
+            }
+
+            .property-item:hover {
+              background-color: #f8f9fa !important;
+              border-color: #e9ecef !important;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            }
+
+            .property-item:hover .text-primary {
+              color: #0d6efd !important;
+            }
+
+            .property-item:hover .text-muted {
+              color: #495057 !important;
+            }
+
+            @media (max-width: 576px) {
+              .col-6 {
+                padding: 0.25rem !important;
+              }
+            }
+
+            @media (min-width: 768px) {
+              .col-md-4 {
+                flex: 0 0 auto;
+                width: 25%;
+              }
+            }
+
+            @media (min-width: 992px) {
+              .col-lg-3 {
+                flex: 0 0 auto;
+                width: 20%;
+              }
+            }
+          `}</style>
         </div>
 
         {/* Sort Options */}

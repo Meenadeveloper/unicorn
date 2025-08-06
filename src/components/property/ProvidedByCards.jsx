@@ -1,5 +1,7 @@
 import React from 'react';
-import team from "../../assets/img/user-1.jpg"
+import team from "../../assets/img/user-1.jpg";
+import agentproduct from "../../assets/img/c-1.png"
+
 const ProvidedByCards = () => {
   const agencyData = {
     name: "Tier ONE",
@@ -31,8 +33,8 @@ const ProvidedByCards = () => {
 
   return (
     <>
-      <link 
-        href="https://fonts.googleapis.com/icon?family=Material+Icons" 
+      <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet"
       />
       <style>{`
@@ -337,12 +339,12 @@ const ProvidedByCards = () => {
       <div className="unicorn-provided-section">
         <div className="container">
           <h2 className="unicorn-section-title">Provided by</h2>
-          
+
           <div className="row g-4">
             {/* Agency Card */}
             <div className="col-md-6">
               <div className="unicorn-card">
-                <div className="unicorn-agency-card" style={{height:"100%", minHeight:"100%"}}>
+                {/* <div className="unicorn-agency-card" style={{height:"100%", minHeight:"100%"}}>
                   <div>
                     <div className="unicorn-agency-logo">
                       {agencyData.logo}
@@ -357,7 +359,11 @@ const ProvidedByCards = () => {
                   <a href="#" className="unicorn-agency-btn">
                     See agency properties ({agencyData.propertiesCount})
                   </a>
-                </div>
+                </div> */}
+                <img
+                  src={agentproduct}
+                  style={{ width: "100%", height: "453px" }}
+                />
               </div>
             </div>
 
@@ -366,8 +372,23 @@ const ProvidedByCards = () => {
               <div className="unicorn-card">
                 <div className="unicorn-agent-card">
                   <div className="unicorn-agent-header">
-                    <div className="unicorn-agent-photo" style={{width:"80px", height:"80px", borderRadius:"50%", overflow:"hidden"}}>
-                      <img src={team} style={{width:"100%", height:"100%", objectFit:"cover"}} />
+                    <div
+                      className="unicorn-agent-photo"
+                      style={{
+                        width: "80px",
+                        height: "80px",
+                        borderRadius: "50%",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <img
+                        src={team}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}
+                      />
                     </div>
                     <div className="unicorn-agent-info">
                       {agentData.superAgent && (
@@ -378,31 +399,43 @@ const ProvidedByCards = () => {
                       )}
                       <h3 className="unicorn-agent-name">{agentData.name}</h3>
                       <div className="unicorn-rating-section">
-                        <span className="unicorn-rating-number">{agentData.rating}</span>
+                        <span className="unicorn-rating-number">
+                          {agentData.rating}
+                        </span>
                         <div className="d-flex">
                           {renderStars(agentData.rating)}
                         </div>
-                        <span className="unicorn-ratings-count">{agentData.ratingsCount} Ratings</span>
+                        <span className="unicorn-ratings-count">
+                          {agentData.ratingsCount} Ratings
+                        </span>
                       </div>
                     </div>
                   </div>
 
                   <div className="unicorn-agent-details">
                     <div className="unicorn-detail-row">
-                      <span className="unicorn-detail-label">Response time</span>
-                      <span className="unicorn-detail-value">{agentData.responseTime}</span>
+                      <span className="unicorn-detail-label">
+                        Response time
+                      </span>
+                      <span className="unicorn-detail-value">
+                        {agentData.responseTime}
+                      </span>
                     </div>
                     <div className="unicorn-detail-row">
                       <span className="unicorn-detail-label">Closed Deals</span>
-                      <span className="unicorn-detail-value">{agentData.closedDeals}</span>
+                      <span className="unicorn-detail-value">
+                        {agentData.closedDeals}
+                      </span>
                     </div>
                     <div className="unicorn-detail-row">
                       <span className="unicorn-detail-label">Languages</span>
-                      <span className="unicorn-detail-value">{agentData.languages}</span>
+                      <span className="unicorn-detail-value">
+                        {agentData.languages}
+                      </span>
                     </div>
                   </div>
 
-                  <a href="#" className="unicorn-agent-btn">
+                  <a href="/agents-details" className="unicorn-agent-btn">
                     See agent properties ({agentData.propertiesCount})
                   </a>
                 </div>

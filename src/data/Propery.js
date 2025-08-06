@@ -6,68 +6,101 @@ import p5 from '../assets/img/p-5.jpg'
 import p6 from '../assets/img/p-6.jpg'
 
 
+import BedIcon from "@mui/icons-material/Bed";
+import BathtubIcon from "@mui/icons-material/Bathtub";
+import SquareFootIcon from "@mui/icons-material/SquareFoot";
+import GarageIcon from "@mui/icons-material/Garage";
+import ApartmentIcon from "@mui/icons-material/Apartment";
+import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import AcUnitIcon from "@mui/icons-material/AcUnit";
+import WhatshotIcon from "@mui/icons-material/Whatshot";
+import KitchenIcon from "@mui/icons-material/Kitchen";
+import DomainIcon from "@mui/icons-material/Domain";
+import PoolIcon from "@mui/icons-material/Pool";
+import ElevatorIcon from "@mui/icons-material/Elevator";
+import FireplaceIcon from "@mui/icons-material/Fireplace";
+import WifiOffIcon from "@mui/icons-material/WifiOff";
+
+
 export const propertyFeature = [
-    {
-        title:'Bedrooms:',
-        value:'3 Beds'
-    },
-    {
-        title:'Bathrooms:',
-        value:'2 Bath'
-    },
-    {
-        title:'Areas:',
-        value:'4,240 sq ft'
-    },
-    {
-        title:'Garage:',
-        value:'1'
-    },
-    {
-        title:'Property Type:',
-        value:'Apartment'
-    },
-    {
-        title:'Year:',
-        value:'Built 1982'
-    },
-    {
-        title:'Status:',
-        value:'Active'
-    },
-    {
-        title:'Cooling:',
-        value:'Central A/C'
-    },
-    {
-        title:'Heating Type:',
-        value:'Forced Air'
-    },
-    {
-        title:'Kitchen Features:',
-        value:'Kitchen Facilities'
-    },
-    {
-        title:'Exterior:',
-        value:'FinishBrick'
-    },
-    {
-        title:'Swimming Pool:',
-        value:'Yes'
-    },
-    {
-        title:'Elevetor:',
-        value:'Yes'
-    },
-    {
-        title:'Fireplace:',
-        value:'Yes'
-    },
-    {
-        title:'Free WiFi:',
-        value:'No'
-    },
-]
+  {
+    title: "Bedrooms:",
+    value: "3 Beds",
+    icon: BedIcon ,
+  },
+  {
+    title: "Bathrooms:",
+    value: "2 Bath",
+    icon: BathtubIcon ,
+  },
+  {
+    title: "Areas:",
+    value: "4,240 sq ft",
+    icon: SquareFootIcon ,
+  },
+  {
+    title: "Garage:",
+    value: "1",
+    icon: GarageIcon ,
+  },
+  {
+    title: "Property Type:",
+    value: "Apartment",
+    icon: ApartmentIcon ,
+  },
+  {
+    title: "Year:",
+    value: "Built 1982",
+    icon: CalendarTodayIcon ,
+  },
+  {
+    title: "Status:",
+    value: "Active",
+    icon: CheckCircleIcon ,
+  },
+  {
+    title: "Cooling:",
+    value: "Central A/C",
+    icon: AcUnitIcon ,
+  },
+  {
+    title: "Heating Type:",
+    value: "Forced Air",
+    icon: WhatshotIcon ,
+  },
+  {
+    title: "Kitchen Features:",
+    value: "Kitchen Facilities",
+    icon: KitchenIcon ,
+  },
+  {
+    title: "Exterior:",
+    value: "FinishBrick",
+    icon: DomainIcon ,
+  },
+  {
+    title: "Swimming Pool:",
+    value: "Yes",
+    icon: PoolIcon ,
+  },
+  {
+    title: "Elevetor:",
+    value: "Yes",
+    icon: ElevatorIcon ,
+  },
+  {
+    title: "Fireplace:",
+    value: "Yes",
+    icon: FireplaceIcon ,
+  },
+  {
+    title: "Free WiFi:",
+    value: "No",
+    icon: WifiOffIcon ,
+  },
+];
+
 export const galleryImg = [
     p1,p2,p3,p4,p5,p6
 ]
