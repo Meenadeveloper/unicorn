@@ -110,7 +110,7 @@ const AgentListDisplay = () => {
                     </div> */}
                   </div>
 
-                  <div className="unicorn-superagent-rating">
+                  {/* <div className="unicorn-superagent-rating">
                     <div className="unicorn-superagent-badge">
                      <StarIcon style={{ color: '#FFD700' }} />    SUPERAGENT
                     </div>
@@ -123,7 +123,7 @@ const AgentListDisplay = () => {
 />
                       <span>{agent.rating}</span>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div className="unicorn-agent-details">
                     <div className="unicorn-detail-row">

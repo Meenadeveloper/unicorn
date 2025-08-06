@@ -534,7 +534,7 @@ const AgentsPage = () => {
 
             <div className="unicorn-search-container">
               {/* Tabs */}
-              <div className="unicorn-tabs">
+              {/* <div className="unicorn-tabs">
                 <button
                   className={`unicorn-tab ${
                     activeTab === "agents" ? "active" : ""
@@ -551,7 +551,7 @@ const AgentsPage = () => {
                 >
                   Companies
                 </button>
-              </div>
+              </div> */}
 
               {/* Search Form */}
               <div className="unicorn-search-form">

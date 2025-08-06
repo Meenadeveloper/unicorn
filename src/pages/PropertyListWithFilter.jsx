@@ -527,7 +527,7 @@ const PropertyListWithFilter = () => {
         <div
           className="container-fluid py-3"
           style={{
-            background: "#f2f2f2",
+            // background: "#f2f2f2",
             marginBottom: "20px",
             borderRadius: "10px",
           }}
@@ -535,7 +535,10 @@ const PropertyListWithFilter = () => {
           <div className="row g-2">
             {visibleItems.map((property, index) => (
               <div key={index} className="col-6 col-md-4 col-lg-3">
-                <div className="property-item d-flex align-items-center p-2 rounded">
+                <div
+                  className=" d-flex align-items-center p-2 rounded"
+                  style={{ border: "1px solid gray", background: "#f2f2f2" }}
+                >
                   <span
                     className="text-primary fw-normal me-1"
                     style={{ fontSize: "14px" }}
@@ -543,7 +546,7 @@ const PropertyListWithFilter = () => {
                     {property.name}
                   </span>
                   <span className="text-muted" style={{ fontSize: "14px" }}>
-                    {property.count}
+                    ( {property.count})
                   </span>
                 </div>
               </div>
@@ -586,7 +589,6 @@ const PropertyListWithFilter = () => {
           </div>
 
           {/* Bootstrap CSS CDN */}
-       
 
           <style jsx>{`
             .btn-link:hover {

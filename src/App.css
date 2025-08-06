@@ -770,7 +770,8 @@
 
         /* properety card */
         .property-card-container{
-          border: 2px solid #cfcdcd;
+          /* border: 1px solid #cfcdcd; */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
           margin-bottom: 20px;
           border-radius: 10px;
           overflow: hidden;
@@ -804,6 +805,7 @@
     align-items: center;
     padding: 0px 10px;
     border-top: 2px solid #f2f2f2;
+    background-color: #d4d4d3;
 }
 @media (max-width: 768px) {
   .unicorn-property-card-top {
@@ -1209,7 +1211,7 @@
           display: flex;
           justify-content: space-between;
           align-items: flex-start;
-          margin-bottom: 12px;
+          /* margin-bottom: 12px; */
         }
 
         .unicorn-agent-main-info {
@@ -1304,7 +1306,7 @@
         }
 
         .unicorn-agent-details {
-          margin-bottom: 20px;
+          /* margin-bottom: 20px; */
         }
 
         .unicorn-detail-row {
